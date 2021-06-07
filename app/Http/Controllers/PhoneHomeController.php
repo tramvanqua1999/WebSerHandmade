@@ -68,7 +68,7 @@ class PhoneHomeController extends Controller
     public function shop(Request $request)
     {
         $shopcode = json_decode($request->shopCode);
-        $data = DB::select('SELECT `shop`.`id`, `shop`.`shopID`, `shop`.`nameShop`, `shop`.`img`, `shop`.`imgBg`, `shop`.`ratingShop`, `shop`.`follow`, `shop`.`description`, `shop`.`address`, `shop`.`phone`, `shop`.`email`, `shop`.`fee`, `shop`.`price`, `shop`.`createshop`, (SELECT COUNT(`product`.`shopCode`) FROM `product`,`shop` WHERE `product`.`shopCode` = `shop`.`id` ) as sumproduct FROM `shop` WHERE `shop`.`id`= ?', [$shopcode]);
+        $data = DB::select('SELECT `shop`.`id`, `shop`.`shopID`, `shop`.`nameShop`, `shop`.`img`, `shop`.`imgBg`, `shop`.`ratingShop`, `shop`.`follow`, `shop`.`description`, `shop`.`address`, `shop`.`phone`, `shop`.`email`, `shop`.`fee`, `shop`.`price`, `shop`.`createshop`, (SELECT COUNT(`shop`.`id`) FROM `product`,`shop` WHERE `product`.`shopCode` = `shop`.`id` AND `shop`.`id` = ? group BY `shop`.`id`) as sumproduct FROM `shop` WHERE `shop`.`id`= ?', [$shopcode,$shopcode]);
         return response()->json($data,200);
     }
     
