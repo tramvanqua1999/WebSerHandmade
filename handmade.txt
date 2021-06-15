@@ -1,0 +1,622 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.3
+-- https://www.phpmyadmin.net/
+--
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th6 07, 2021 lúc 03:21 PM
+-- Phiên bản máy phục vụ: 10.4.14-MariaDB
+-- Phiên bản PHP: 7.4.11
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Cơ sở dữ liệu: `handmade`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `commentshop`
+--
+
+CREATE TABLE `commentshop` (
+  `id` int(11) NOT NULL,
+  `shopCode` int(11) NOT NULL,
+  `content` text NOT NULL,
+  `user` varchar(255) NOT NULL,
+  `rating` double NOT NULL,
+  `create` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `commentshop`
+--
+
+INSERT INTO `commentshop` (`id`, `shopCode`, `content`, `user`, `rating`, `create`) VALUES
+(16, 1, 'Shop ưu đãi rất nhiều', '0382143402', 4, '2021-04-26 10:34:36'),
+(17, 1, 'Huy Kaisoul da xem', '0382143402', 4.5, '2021-04-26 11:29:36'),
+(18, 1, 'Shop uy tin, chat luong', '0382143402', 4, '2021-05-28 17:11:06'),
+(19, 1, 'Kha ok', '0382143402', 5, '2021-05-28 17:16:13'),
+(20, 1, 'Nice', '0382143402', 3.5, '2021-05-28 17:49:56');
+
+--
+-- Bẫy `commentshop`
+--
+DELIMITER $$
+CREATE TRIGGER `totals rating shop` AFTER INSERT ON `commentshop` FOR EACH ROW UPDATE `shop` SET `ratingShop`= (SELECT ROUND(AVG(`commentshop`.`rating`),2) FROM `commentshop` WHERE `commentshop`.`shopCode`  = new.shopCode)   WHERE `shop`.`id` = new.shopCode
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `credit`
+--
+
+CREATE TABLE `credit` (
+  `id` int(11) NOT NULL,
+  `shopCode` int(11) NOT NULL,
+  `cardNumber` varchar(255) NOT NULL DEFAULT '5555555555554444',
+  `expiryDate` varchar(255) NOT NULL DEFAULT '12/22',
+  `cardHolderName` varchar(255) NOT NULL DEFAULT 'Your Name',
+  `cvvCode` int(11) NOT NULL DEFAULT 424,
+  `create` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `credit`
+--
+
+INSERT INTO `credit` (`id`, `shopCode`, `cardNumber`, `expiryDate`, `cardHolderName`, `cvvCode`, `create`) VALUES
+(1, 1, '5555555555554444', '12/22', 'Your Name', 424, '2021-05-24 02:14:56'),
+(3, 4, '5555555555554444', '12/22', 'Your Name', 424, '2021-05-24 17:43:38'),
+(4, 5, '5555555555554444', '12/22', 'Your Name', 424, '2021-05-27 19:55:50'),
+(5, 6, '5555555555554444', '12/22', 'Your Name', 424, '2021-05-29 06:50:23'),
+(6, 7, '5555555555554444', '12/22', 'Your Name', 424, '2021-05-29 06:53:51');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `customer`
+--
+
+CREATE TABLE `customer` (
+  `id` int(11) NOT NULL,
+  `userID` varchar(255) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `create` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `customer`
+--
+
+INSERT INTO `customer` (`id`, `userID`, `name`, `email`, `address`, `create`) VALUES
+(5, '0382143402', 'Huynh Nhut Huy', 'Huy@gmail.com', 'Can Tho', '2021-04-23 09:03:16'),
+(6, '0382143401', 'Tram Van Qua', 'Qua@gmail.com', 'Soc Trang', '2021-05-24 17:57:58');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `discounts`
+--
+
+CREATE TABLE `discounts` (
+  `id` int(11) NOT NULL,
+  `productCode` int(11) NOT NULL,
+  `shopCode` int(11) NOT NULL,
+  `discount` int(11) NOT NULL,
+  `lastday` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `discounts`
+--
+
+INSERT INTO `discounts` (`id`, `productCode`, `shopCode`, `discount`, `lastday`) VALUES
+(1, 1, 1, 10, '2021-03-16'),
+(2, 4, 1, 40, '2021-03-31');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `favorite`
+--
+
+CREATE TABLE `favorite` (
+  `id` int(11) NOT NULL,
+  `productCode` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `favorite`
+--
+
+INSERT INTO `favorite` (`id`, `productCode`, `username`) VALUES
+(79, 1, '0382143409'),
+(82, 4, '0382143409'),
+(91, 3, '0382143401'),
+(93, 5, '0382143402'),
+(96, 1, '0382143402'),
+(97, 63, '0382143402'),
+(98, 3, '0382143402');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `follow`
+--
+
+CREATE TABLE `follow` (
+  `id` int(11) NOT NULL,
+  `shopCode` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `create` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `follow`
+--
+
+INSERT INTO `follow` (`id`, `shopCode`, `username`, `create`) VALUES
+(43, 1, '0382143409', '2021-04-24 05:41:15'),
+(52, 1, '0382143402', '2021-05-28 17:37:47'),
+(53, 5, '0382143402', '2021-06-01 13:24:15');
+
+--
+-- Bẫy `follow`
+--
+DELIMITER $$
+CREATE TRIGGER `delfollow` AFTER DELETE ON `follow` FOR EACH ROW UPDATE `shop` SET `follow`= `follow` - 1 WHERE `shop`.`id` = old.shopCode
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `follow` AFTER INSERT ON `follow` FOR EACH ROW UPDATE `shop` SET `follow` = `follow` + 1 WHERE `shop`.`id` = new.shopCode
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `group`
+--
+
+CREATE TABLE `group` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `create` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `group`
+--
+
+INSERT INTO `group` (`id`, `name`, `create`) VALUES
+(1, 'Quạt', '2021-05-07 08:24:25'),
+(2, 'Nhẫn', '2021-05-07 08:25:15'),
+(3, 'Kẹp tóc', '2021-05-07 08:26:10'),
+(4, 'Đèn', '2021-05-07 08:27:59'),
+(5, 'Hoa', '2021-05-29 09:16:00');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `imageproduct`
+--
+
+CREATE TABLE `imageproduct` (
+  `id` int(11) NOT NULL,
+  `productCode` int(11) NOT NULL,
+  `imgpath` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `imageproduct`
+--
+
+INSERT INTO `imageproduct` (`id`, `productCode`, `imgpath`) VALUES
+(1, 1, 'https://drive.google.com/uc?export=view&id=1Lmk27ihY8l1oBUpMnIYKWfXZYdi13pbH'),
+(2, 3, 'https://drive.google.com/uc?export=view&id=1ZvXBfwUTqej0HUFLJWl_RdVISX4i6bm6'),
+(3, 3, 'https://drive.google.com/uc?export=view&id=1Q4Cifxgoq8OljGO8DYZZB9VOJVw3x4YD'),
+(4, 3, 'https://drive.google.com/uc?export=view&id=1hHofJNDw_Yenb1stosBaUqI5uapQtLvk'),
+(5, 4, 'https://drive.google.com/uc?export=view&id=1TC2FEGGlPRzgCXJ94rIVA7F0_z9aQeOt'),
+(6, 4, 'https://drive.google.com/uc?export=view&id=1Exn0DIfLf8TM6vHcTY8tGT805RTl3gDE'),
+(7, 5, 'https://drive.google.com/uc?export=view&id=113g5dlB3WaOBzRBWkfgIPoMJyUU5PR2M'),
+(8, 5, 'https://drive.google.com/uc?export=view&id=1C0W11A7KuCSj87eFHoc4Uzht9CyS5RaC'),
+(9, 5, 'https://drive.google.com/uc?export=view&id=1koXBmuz-O-ErSyxYcZiYnCXHQlV4RnIk'),
+(18, 63, 'https://drive.google.com/uc?export=view&id=1KhVOHJIBva8TiWE69BfvjFB5RIChzmdt'),
+(19, 63, 'https://drive.google.com/uc?export=view&id=1MWDSBTTHOUWHUkS73P22DF4ZCQp8jcVh'),
+(20, 63, 'https://drive.google.com/uc?export=view&id=1z2WYxsy1LYWcvIBDpbGwEJknsQWTRpc5'),
+(21, 64, 'https://drive.google.com/uc?export=view&id=1Miy3mOtSqOpFpv97pIn1r_hNMgeHBDSA'),
+(22, 64, 'https://drive.google.com/uc?export=view&id=16_dY29DMN4l6WG1LeC7N2VJydbV69vnK'),
+(23, 65, 'https://drive.google.com/uc?export=view&id=1Na8j1XEyXd86EBKAC7Ttr3i6fNnr2SrT');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `migrations`
+--
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(1, '2021_02_01_081526_users', 1),
+(2, '2014_10_12_100000_create_password_resets_table', 2),
+(3, '2019_08_19_000000_create_failed_jobs_table', 2),
+(4, '2020_10_26_080519_user_migrate', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `order`
+--
+
+CREATE TABLE `order` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `productCode` int(11) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `price` double NOT NULL,
+  `priceship` double NOT NULL DEFAULT 0,
+  `type` int(11) NOT NULL DEFAULT 0,
+  `check` int(11) NOT NULL DEFAULT 0,
+  `create` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `order`
+--
+
+INSERT INTO `order` (`id`, `username`, `productCode`, `amount`, `price`, `priceship`, `type`, `check`, `create`) VALUES
+(13, '0382143402', 1, 1, 25000, 30000, 0, 4, '2021-05-14 04:45:04'),
+(14, '0382143402', 4, 14, 15000, 0, 1, 1, '2021-05-14 04:50:44'),
+(15, '0382143402', 1, 1, 25000, 30000, 1, 3, '2021-03-14 04:52:26'),
+(16, '0382143402', 4, 1, 15000, 30000, 0, 4, '2021-05-14 07:23:39'),
+(17, '0382143402', 4, 2, 9000, 30000, 0, 3, '2021-04-14 07:24:49'),
+(18, '0382143402', 5, 1, 44000, 30000, 0, 3, '2021-05-14 07:25:46'),
+(19, '0382143402', 4, 1, 9000, 30000, 0, 3, '2021-05-14 07:25:46'),
+(20, '0382143402', 3, 1, 13500, 30000, 1, 0, '2021-05-14 07:30:10'),
+(21, '0382143402', 1, 3, 22500, 30000, 0, 3, '2021-05-28 17:24:10'),
+(22, '0382143402', 63, 1, 15000, 0, 0, 3, '2021-03-29 06:41:25'),
+(23, '0382143402', 64, 2, 32400, 0, 1, 3, '2021-05-29 06:43:50'),
+(24, '0382143402', 64, 5, 32400, 0, 1, 3, '2021-05-29 06:43:50');
+
+--
+-- Bẫy `order`
+--
+DELIMITER $$
+CREATE TRIGGER `caculator` AFTER INSERT ON `order` FOR EACH ROW UPDATE `product` SET `amount`= amount - new.amount WHERE `product`.`id` = new.productCode
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `product`
+--
+
+CREATE TABLE `product` (
+  `id` int(11) NOT NULL,
+  `groupProduct` int(11) NOT NULL,
+  `shopCode` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` double NOT NULL,
+  `description` text NOT NULL,
+  `rating` double NOT NULL DEFAULT 5,
+  `amount` int(11) NOT NULL,
+  `countSale` int(11) NOT NULL DEFAULT 0,
+  `discount` int(11) DEFAULT 0,
+  `lastday` date DEFAULT '2020-03-31',
+  `create` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `product`
+--
+
+INSERT INTO `product` (`id`, `groupProduct`, `shopCode`, `name`, `price`, `description`, `rating`, `amount`, `countSale`, `discount`, `lastday`, `create`) VALUES
+(1, 1, 1, 'Quạt nan tre Hồng cánh đào', 25000, 'Quạt Nan Tre HỒNG CÀNH ĐÀO Hình Hoa Khiêu Vũ Cổ Điển Mùa Hè Cầm Tay Trung Quốc Quà Tặng Tiệc Cưới Trang Trí Xinh Xắn. Chất liệu: Vải lụa dày trơn in họa tiết bền chặt không phai, không bạc, Tay cầm và nan bằng gỗ cứng cáp, chắc chắn. Quạt là phụ kiện kết hợp trang phục cổ trang, trang phục truyền thống, biểu diễn, trưng bày, trang trí nhà cửa hoặc quà tặng,...\r\n', 2.62, 10, 0, 10, '2021-06-30', '2021-04-30 08:15:38'),
+(3, 2, 1, 'Nhẫn sợi chỉ đỏ thanh lịch', 15000, 'Nhẫn SỢI CHỈ ĐỎ thanh lịch quà tặng xinh xắn dễ thương 15k / 1 cái - Thích hợp làm quà tặng cho bạn bè và người thân - Sản phẩm đang hot trên thị trường và được các bạn trẻ vô cùng yêu thích. - Sản phẩm cập nhật theo mốt mới và update thường xuyên - Đặc biệt là quà tặng tấm ảnh thiết kế ngẫu nhiên theo sản phẩm.', 4, 5, 0, 10, '2021-06-30', '2021-04-30 08:23:58'),
+(4, 3, 1, 'Kẹp vành tai ba bướm nối thả', 15000, 'Kẹp vành tai ba bướm nối thả thích hợp làm quà tặng cho bạn bè và người thân. Sản phẩm đang hot trên thị trường và được các bạn trẻ vô cùng yêu thích. Sản phẩm cập nhật theo mốt mới nhất và update thường xuyên. Ring ngay sản phẩm về bổ sung cho bộ sưu tập của bạn nhé. Sản phẩm với những góc ánh màu khác nhau nổi bật, tinh tế giúp phái nữ thêm nổi bật khi diện, thu hút ánh nhìn.', 4.5, 15, 0, 40, '2021-06-30', '2021-04-30 08:26:48'),
+(5, 4, 1, 'Đèn LED USB phi hành gia', 44000, 'Winzige Đèn LED USB khi dùng máy tính học tập đèn ngủ hoạ tiết mô hình phi hành gia thu nhỏ giá tốt. Chiều dài: 33cm, Công suất: 0.5W, Hàng ngày, tiện lợi, máy tính, USB, quà tặng', 3, 5, 0, 0, '2020-03-31', '2021-03-10 08:28:39'),
+(63, 5, 4, 'Hoa_Sao Khô O7 Màu', 15000, 'Hoa_Sao Khô O7 Màu - Nguyên Liệu Trang Trí, Handmade- Các mẫu được đóng thành từng túi nhỏ riêng biệt, mỗi túi gồm 5 cành lớn như ảnh mẫu.- Mẫu dạng hoa khô ép, gồm 7 màu: Vàng, Xanh Dương, Đỏ, Tím, Hồng, Trắng, Xanh Ngọc.', 5, 20, 0, 0, '2021-05-28', '2021-05-28 08:42:40'),
+(64, 1, 4, 'Kẹp Sách Hình Quạt Cổ Điển', 36000, 'Màu sắc như hình Tên: Dấu trang quạt xếp kim loại Chất liệu: Đồng thau Kích thước: 86 * 55 * 0.4mm Hoa văn trang trí: thư pháp và hội họa Đóng gói: 1 CÁI Lưu ý: -Có sự khác biệt 2-3% theo cách đo lường thủ công', 4.25, 25, 0, 10, '2021-06-06', '2021-05-28 13:43:08'),
+(65, 4, 5, 'Đèn gỗ hoa cúc vạn thọ DIY', 50000, 'Không chỉ đơn thuần là một chiếc đèn chiếu sáng vào ban đêm, mà còn là một tác phẩm mỹ nghệ độc đáo mang tính nghệ thuật trang trí cho căn phòng, ngôi nhà trở nên sang trọng và phong cách hơn.', 5, 30, 0, 0, '2021-05-28', '2021-05-28 13:49:18');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `ratingproduct`
+--
+
+CREATE TABLE `ratingproduct` (
+  `id` int(11) NOT NULL,
+  `productCode` int(11) NOT NULL,
+  `user` varchar(255) NOT NULL,
+  `rating` double NOT NULL,
+  `create` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `ratingproduct`
+--
+
+INSERT INTO `ratingproduct` (`id`, `productCode`, `user`, `rating`, `create`) VALUES
+(1, 1, '0382143402', 1, '2021-04-27 04:40:51'),
+(2, 1, '0382143402', 1, '2021-04-27 04:42:34'),
+(3, 1, '0382143402', 3.5, '2021-04-27 04:42:53'),
+(4, 1, '0382143402', 5, '2021-04-27 04:42:53'),
+(5, 64, '0382143402', 3.5, '2021-04-27 04:42:53'),
+(6, 64, '0382143402', 5, '2021-04-27 04:42:53');
+
+--
+-- Bẫy `ratingproduct`
+--
+DELIMITER $$
+CREATE TRIGGER `totals rating` AFTER INSERT ON `ratingproduct` FOR EACH ROW UPDATE `product` SET `rating`= (SELECT ROUND(AVG(`ratingproduct`.`rating`),2) FROM `ratingproduct` WHERE `ratingproduct`.`productCode`  = new.productCode)   WHERE `product`.`id` = new.productCode
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `shop`
+--
+
+CREATE TABLE `shop` (
+  `id` int(11) NOT NULL,
+  `shopID` varchar(255) NOT NULL,
+  `nameShop` varchar(255) NOT NULL,
+  `img` varchar(255) NOT NULL DEFAULT 'https://drive.google.com/uc?export=view&id=1lzuEPnRmKfY6b3LztswmwODn65FNyN-B',
+  `imgBg` varchar(255) NOT NULL DEFAULT 'assets/images/backgroundshop.jpg',
+  `ratingShop` double DEFAULT 5,
+  `follow` int(11) NOT NULL DEFAULT 0,
+  `description` varchar(255) DEFAULT NULL,
+  `address` varchar(255) NOT NULL,
+  `phone` varchar(11) DEFAULT '0380000000',
+  `email` varchar(255) NOT NULL,
+  `fee` double DEFAULT 0,
+  `price` double DEFAULT 0,
+  `createshop` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `shop`
+--
+
+INSERT INTO `shop` (`id`, `shopID`, `nameShop`, `img`, `imgBg`, `ratingShop`, `follow`, `description`, `address`, `phone`, `email`, `fee`, `price`, `createshop`) VALUES
+(1, '0382143408', 'Tăng Minh Thông ', 'https://drive.google.com/uc?export=view&id=1lw8xjsKGLM9riMqiPnc-rOvGgTSj5i48', 'https://drive.google.com/uc?export=view&id=1pbMr8k0OnVGozvf9_CgPugWVOa1Dggjj', 4.2, 2, 'Dep trai', 'Vĩnh Long', '0702940957', 'Thong@gmail.com', 120000, 30000, '2021-04-02 11:59:03'),
+(4, '0382143409', 'Dinh Hoang Quan', 'https://drive.google.com/uc?export=view&id=1lzuEPnRmKfY6b3LztswmwODn65FNyN-B', 'assets/images/backgroundshop.jpg', 5, 0, NULL, 'Ben Tre', '0284695762', 'Quan@gmail.com', 0, 0, '2021-05-24 17:43:38'),
+(5, '0921480295', 'Kim Phuong Store', 'https://drive.google.com/uc?export=view&id=1lzuEPnRmKfY6b3LztswmwODn65FNyN-B', 'assets/images/backgroundshop.jpg', 5, 1, NULL, 'Vinh Long', NULL, 'Phuong@gmail.com', 0, 0, '2021-05-27 19:55:50'),
+(6, '0382143406', 'Olivin Shop', 'https://drive.google.com/uc?export=view&id=1lzuEPnRmKfY6b3LztswmwODn65FNyN-B', 'assets/images/backgroundshop.jpg', 5, 0, NULL, 'Q.Thu Duc TP HCM', '0380000000', 'Olivin@gmail.com', 0, 0, '2021-05-29 06:50:23'),
+(7, '0382143407', 'HanShen 888', 'https://drive.google.com/uc?export=view&id=1lzuEPnRmKfY6b3LztswmwODn65FNyN-B', 'assets/images/backgroundshop.jpg', 5, 0, NULL, 'Tp HCM', '0380000000', 'Hanshen@gmail.com', 0, 0, '2021-05-29 06:53:51');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` int(11) NOT NULL,
+  `check` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`, `type`, `check`) VALUES
+(1, 'admin', '$2y$10$vjT2G/9NLO51SMakdlXJXeuhTWurTVzdhLrDNpzdQ.D0PB0SGZipS', 2, 100),
+(3, 'admin1', '$2y$10$vjT2G/9NLO51SMakdlXJXeuhTWurTVzdhLrDNpzdQ.D0PB0SGZipS', 2, 1),
+(4, '0382143402', '$2y$10$kbmO7Yt60bnxdskQvQS/cOyZwnPiJFkZnZKRnUaJZUOO9dqurJB6G', 0, 1),
+(10, '0382143408', '$2y$10$93pEQuDn58/Wmti78S6gke2RmbW4gWUjDgPVuWV.VLTiSCuhltDM.', 1, 2),
+(13, '0382143409', '$2y$10$3uTaB2Xq5dsSpYqdlMRVCu4sM3YvgRWerZZbKM/6PZhZyF.23yxi6', 1, 2),
+(14, '0382143401', '$2y$10$AztEF4rZFTc/YwXfDBV4.e/943GAMmq8Mq3u6y22EQwG8UwjEcciu', 0, 2),
+(15, '0921480295', '$2y$10$aI2Ul5WccpdF/6N28uowqumnGSwnEOGlV.dYbvTaMB9kCOXN49Aey', 1, 0),
+(17, '0382143406', '$2y$10$HwatKFLraTwXf46xLc3w1O6q0c161lp51WZb/Vfhh/Ece4FVh9lAS', 1, 0),
+(18, '0382143407', '$2y$10$LDSzoG0yI8vDt9HA747SJuUdpVAWrwC1RGClIH1YjEK7cPeq1eECW', 1, 0);
+
+--
+-- Chỉ mục cho các bảng đã đổ
+--
+
+--
+-- Chỉ mục cho bảng `commentshop`
+--
+ALTER TABLE `commentshop`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `credit`
+--
+ALTER TABLE `credit`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `discounts`
+--
+ALTER TABLE `discounts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `favorite`
+--
+ALTER TABLE `favorite`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `follow`
+--
+ALTER TABLE `follow`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `group`
+--
+ALTER TABLE `group`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `imageproduct`
+--
+ALTER TABLE `imageproduct`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `migrations`
+--
+ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `order`
+--
+ALTER TABLE `order`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `ratingproduct`
+--
+ALTER TABLE `ratingproduct`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `shop`
+--
+ALTER TABLE `shop`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `user_username_unique` (`username`);
+
+--
+-- AUTO_INCREMENT cho các bảng đã đổ
+--
+
+--
+-- AUTO_INCREMENT cho bảng `commentshop`
+--
+ALTER TABLE `commentshop`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT cho bảng `credit`
+--
+ALTER TABLE `credit`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT cho bảng `customer`
+--
+ALTER TABLE `customer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT cho bảng `discounts`
+--
+ALTER TABLE `discounts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT cho bảng `favorite`
+--
+ALTER TABLE `favorite`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+
+--
+-- AUTO_INCREMENT cho bảng `follow`
+--
+ALTER TABLE `follow`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+
+--
+-- AUTO_INCREMENT cho bảng `group`
+--
+ALTER TABLE `group`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT cho bảng `imageproduct`
+--
+ALTER TABLE `imageproduct`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT cho bảng `migrations`
+--
+ALTER TABLE `migrations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT cho bảng `order`
+--
+ALTER TABLE `order`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT cho bảng `product`
+--
+ALTER TABLE `product`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+
+--
+-- AUTO_INCREMENT cho bảng `ratingproduct`
+--
+ALTER TABLE `ratingproduct`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT cho bảng `shop`
+--
+ALTER TABLE `shop`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT cho bảng `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

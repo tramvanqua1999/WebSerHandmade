@@ -41,7 +41,7 @@ class PhoneHomeController extends Controller
     public function product()
     {
         try {
-            $data =  DB::select('SELECT GROUP_CONCAT(`imageproduct`.`imgpath`) as listpath, `discount`, `lastday`,`product`.`id` ,`imageproduct`.`productCode`, `groupProduct`, `shopCode`, `name`, `price`, `description`, `rating`, `amount`, `create` FROM `product`, `imageproduct` WHERE `product`.`amount` > 0 AND`imageproduct`.`productCode`= `product`.`id` GROUP BY `imageproduct`.`productCode`');
+            $data =  DB::select('SELECT GROUP_CONCAT(`imageproduct`.`imgpath`) as listpath, `discount`, `lastday`,`product`.`id` ,`imageproduct`.`productCode`, `groupProduct`, `shopCode`, `name`, `price`, `description`, `rating`, `amount`, `create` FROM `product`, `imageproduct` WHERE `product`.`amount` > 0 AND`imageproduct`.`productCode`= `product`.`id` GROUP BY `imageproduct`.`productCode`  order BY `product`.`create` DESC');
             return response()->json($data,200);
         } catch (ModelNotFoundException $exception) {
             return response()->json("error",300);
