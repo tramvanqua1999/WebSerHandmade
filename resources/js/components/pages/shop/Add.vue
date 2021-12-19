@@ -4,12 +4,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Add Product</h1>
+            <h1>Thêm sản phẩm</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><router-link to="/shop/home">Home</router-link></li>
-              <li class="breadcrumb-item active">Add Product</li>
+              <li class="breadcrumb-item active">Thêm sản phẩm</li>
             </ol>
           </div>
         </div>
@@ -25,46 +25,46 @@
             <!-- jquery validation -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">From Create</h3>
+                <h3 class="card-title">Bảng tạo sản phẩm</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form role="form" id="quickForm" @submit.prevent="addImages">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Name product</label>
-                    <input type="text" class="form-control" v-model="add.nameproduct" id="exampleInputEmail1" placeholder="Enter name of product">
+                    <label for="exampleInputEmail1">Tên sản phẩm</label>
+                    <input type="text" class="form-control" v-model="add.nameproduct" id="exampleInputEmail1" placeholder="Tên của sản phẩm">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Price Product</label>
-                    <input type="text"  class="form-control" v-model="add.priceproduct"  id="exampleInputPassword1" placeholder="Enter price of product (vd: 200000) vnd">
+                    <label for="exampleInputPassword1">Giá sản phẩm</label>
+                    <input type="text"  class="form-control" v-model="add.priceproduct"  id="exampleInputPassword1" placeholder="Giá của sản phẩm (vd: 200000) vnd">
                   </div>
                    <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Description</label>
-                    <textarea class="form-control" v-model="add.description" id="exampleFormControlTextarea1" placeholder="Describe yourself here..." rows="3"></textarea>
+                    <label for="exampleFormControlTextarea1">Mô tả</label>
+                    <textarea class="form-control" v-model="add.description" id="exampleFormControlTextarea1" placeholder="Mô tả sản phẩm của bạn..." rows="3"></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Amount Product</label>
-                    <input type="text"  class="form-control" v-model="add.amountproduct"  id="exampleInputPassword1" placeholder="Enter amount product">
+                    <label for="exampleInputPassword1">Số lượng</label>
+                    <input type="text"  class="form-control" v-model="add.amountproduct"  id="exampleInputPassword1" placeholder="Sô lượng của sản phẩm">
                   </div>
                    <div class="form-group">
                     <label for="exampleInputPassword1">Discount Product</label>
                     <input type="text"  class="form-control" v-model="add.discountproduct"  id="exampleInputPassword1" placeholder="VD: 10, 20 (%)">
                   </div>
                   <div class="form-group colum">
-                    <label for="example-date-input" class="col-2 col-form-label">Date</label>
+                    <label for="example-date-input" class="col-2 col-form-label">Ngày</label>
                     <div class="col-10">
                       <input class="form-control" v-model="add.date" style="margin-left:-10px ; width: 30%" type="date" value="2021-05-10" id="example-date-input">
                     </div>
                   </div>
                     <div class="form-group">
-                    <label>Minimal</label>
+                    <label>Nhóm</label>
                     <select class="form-control select2" style="width: 100%;" v-model="add.type">
                         <option  v-for="item in this.group" :key="item.id" :value="item.id">{{item.name}}</option>                    
                     </select>
                     </div>
                     <div class="form-group">
-                    <label for="exampleInputEmail1">Choose images</label>
+                    <label for="exampleInputEmail1">Chọn hình ảnh sản phẩm</label>
                     <div id="app" >
                             <input   type="file" class="form-control" multiple accept="image/jpeg/jpg" @change="uploadImage"/>
                             <div style="display: inline; margin-top: 30px; margin-right: 20px" v-for="(data, key) in datas.url" :key="key">
@@ -75,7 +75,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
                 </div>
               </form>
             </div>

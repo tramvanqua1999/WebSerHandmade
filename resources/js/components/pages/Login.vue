@@ -3,18 +3,18 @@
 		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
 			<form  class="login100-form validate-form">
 				<span class="login100-form-title p-b-37">
-					Login
+					Đăng nhập
 				</span>
 
 				<div class="wrap-input100 validate-input m-b-20"  :class="{'alert-validate': !! error.username}" data-validate="Enter username or email">
 					<span v-if="checkErrUser" @click="clearErrorUser" class="btn-hide-validate"><i  class="fa fa-times-circle"></i></span>
-					<input class="input100"  v-model="data.username" type="text"  placeholder="Username or email">
+					<input class="input100"  v-model="data.username" type="text"  placeholder="SĐT hoặc email">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input m-b-25"  :class="{'alert-validate': !! error.password}" data-validate = "Enter password">
 					<span v-if="checkErrPass"  @click="clearErrorPass" class="btn-hide-validate"><i class="fa fa-times-circle"></i></span>
-					<input class="input100" v-model="data.password" type="password"  placeholder="Password">
+					<input class="input100" v-model="data.password" type="password"  placeholder="Mật khẩu">
 					<span class="focus-input100"></span>
 				</div>
 				<div class="text-red-500 mb-6" v-if="generalError">
@@ -22,7 +22,7 @@
 				</div>
 				<div class="container-login100-form-btn">
 					<button class="login100-form-btn" @click="onSubmit" :disabled="isLogging" :loading="isLogging">
-						{{isLogging ? 'Loging.....':'Login'}}
+						{{isLogging ? 'Loging.....':'Đăng nhập'}}
 					</button>
 				</div>
 			</form>

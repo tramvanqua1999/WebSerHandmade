@@ -88649,7 +88649,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 // add to component
@@ -88790,7 +88789,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Account")
+                  _vm._v("Tài khoản")
                 ])
               ])
             ])
@@ -88815,7 +88814,7 @@ var render = function() {
                         staticStyle: { width: "80px" },
                         attrs: { to: { path: "/create" } }
                       },
-                      [_vm._v("Add\n                                ")]
+                      [_c("i", { staticClass: "nav-icon fas fa-plus" })]
                     ),
                     _vm._v(" "),
                     _c("br"),
@@ -88919,7 +88918,12 @@ var render = function() {
                                                     }
                                                   }
                                                 },
-                                                [_vm._v("Delete")]
+                                                [
+                                                  _c("i", {
+                                                    staticClass:
+                                                      "fas fa-trash-alt"
+                                                  })
+                                                ]
                                               )
                                             ]),
                                             _vm._v(" "),
@@ -88945,7 +88949,12 @@ var render = function() {
                                                           }
                                                         }
                                                       },
-                                                      [_vm._v("See More")]
+                                                      [
+                                                        _c("i", {
+                                                          staticClass:
+                                                            "fas fa-eye"
+                                                        })
+                                                      ]
                                                     )
                                                   ]
                                                 )
@@ -88997,7 +89006,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Account")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Tài khoản ")])
     ])
   },
   function() {
@@ -89007,7 +89016,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
         _vm._v(
-          "\n                                                        DataTable with\n                                                        default features\n                                                    "
+          "\n                                                        Dữ liệu danh sách tài khoản\n                                                    "
         )
       ])
     ])
@@ -89047,7 +89056,7 @@ var staticRenderFns = [
               "aria-sort": "descending"
             }
           },
-          [_vm._v("Username")]
+          [_vm._v("Tài khoản")]
         ),
         _vm._v(" "),
         _c(
@@ -89062,7 +89071,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Type(s)")]
+          [_vm._v("Loại(s)")]
         ),
         _vm._v(" "),
         _c(
@@ -89077,7 +89086,7 @@ var staticRenderFns = [
               "aria-label": "CSS grade: activate to sort column ascending"
             }
           },
-          [_vm._v("Delete")]
+          [_vm._v("Xóa")]
         ),
         _vm._v(" "),
         _c(
@@ -89092,7 +89101,7 @@ var staticRenderFns = [
               "aria-label": "CSS grade: activate to sort column ascending"
             }
           },
-          [_vm._v("Information")]
+          [_vm._v("Thông tin")]
         )
       ])
     ])
@@ -89359,14 +89368,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 type: "number",
                 width: "80px"
             }, {
-                label: "Username",
+                label: "Tài khoản",
                 field: "username"
             }, {
-                label: "Type",
+                label: "Loại(s)",
                 field: "type",
                 type: "number"
             }, {
-                label: "Function",
+                label: "Chặn tài khoản",
                 field: "function",
                 filterable: true
             }],
@@ -89558,7 +89567,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Block Account shop - customer")
+                  _vm._v("Chặn tài khoản cửa hàng hoặc khách hàng")
                 ])
               ])
             ])
@@ -89635,9 +89644,9 @@ var render = function() {
                                                     }
                                                   },
                                                   [
-                                                    _vm._v(
-                                                      "\n                                                                        Block\n                                                                    "
-                                                    )
+                                                    _c("i", {
+                                                      staticClass: "fas fa-lock"
+                                                    })
                                                   ]
                                                 )
                                               ])
@@ -89680,7 +89689,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Block Account")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Chặn tài khoản")])
     ])
   },
   function() {
@@ -89690,7 +89699,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
         _vm._v(
-          "\n                                                        The row account table or customer\n                                                    "
+          "\n                                                        Danh sách tài khoản cửa hàng hoặc khách hàng\n                                                    "
         )
       ])
     ])
@@ -89875,14 +89884,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 type: "number",
                 width: "80px"
             }, {
-                label: "Username",
+                label: "Tài khoản",
                 field: "username"
             }, {
-                label: "Type",
+                label: "Loại(s)",
                 field: "type",
                 type: "number"
             }, {
-                label: "Function",
+                label: "Mở chặn tài khoản",
                 field: "function",
                 filterable: true
             }],
@@ -89965,7 +89974,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Unblock Account shop - customer")
+                  _vm._v("Bỏ chặn tài khoản khách hàng hoặc cửa hàng")
                 ])
               ])
             ])
@@ -90042,9 +90051,10 @@ var render = function() {
                                                     }
                                                   },
                                                   [
-                                                    _vm._v(
-                                                      "\n                                                                        Unblock\n                                                                    "
-                                                    )
+                                                    _c("i", {
+                                                      staticClass:
+                                                        "fas fa-lock-open"
+                                                    })
                                                   ]
                                                 )
                                               ])
@@ -90087,7 +90097,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Unblock Account")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Bỏ chặn tài khoản")])
     ])
   },
   function() {
@@ -90097,7 +90107,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
         _vm._v(
-          "\n                                                        The row account table or customer\n                                                    "
+          "\n                                                        Danh sách dữ liệu khách hàng và cửa hàng\n                                                    "
         )
       ])
     ])
@@ -90282,14 +90292,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 type: "number",
                 width: "80px"
             }, {
-                label: "Username",
+                label: "Tài khoản",
                 field: "username"
             }, {
-                label: "Type",
+                label: "Loại(s)",
                 field: "type",
                 type: "number"
             }, {
-                label: "Function",
+                label: "Chức năng",
                 field: "function",
                 filterable: true
             }],
@@ -90372,7 +90382,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Confirmation Account shop - customer")
+                  _vm._v("Thông tin tài khoản khách hàng và cửa hàng")
                 ])
               ])
             ])
@@ -90495,7 +90505,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
       _c("h1", { staticClass: "m-0 text-dark" }, [
-        _vm._v("Confirmation Account")
+        _vm._v("Thông tin tài khoản")
       ])
     ])
   },
@@ -90506,7 +90516,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
         _vm._v(
-          "\n                                                        The row account table or customer\n                                                    "
+          "\n                                                        Danh sách tài khoản khách hàng và cửa hàng\n                                                    "
         )
       ])
     ])
@@ -90718,7 +90728,7 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("li", { staticClass: "breadcrumb-item active" }, [
-                _vm._v("Add")
+                _vm._v("Thêm")
               ])
             ])
           ])
@@ -90748,7 +90758,7 @@ var render = function() {
                   _c("div", { staticClass: "card-body" }, [
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                        _vm._v("Username")
+                        _vm._v("Tài khoản")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -90780,7 +90790,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-                        _vm._v("Password")
+                        _vm._v("Mật khẩu")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -90812,7 +90822,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-                        _vm._v("Repass")
+                        _vm._v("Mật khẩu mới")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -90843,7 +90853,7 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
-                      _c("label", [_vm._v("Minimal")]),
+                      _c("label", [_vm._v("Nhóm người dùng")]),
                       _vm._v(" "),
                       _c(
                         "select",
@@ -90880,11 +90890,11 @@ var render = function() {
                         },
                         [
                           _c("option", { attrs: { value: "0" } }, [
-                            _vm._v("Customer")
+                            _vm._v("Khách hàng")
                           ]),
                           _vm._v(" "),
                           _c("option", { attrs: { value: "1" } }, [
-                            _vm._v("Store")
+                            _vm._v("Cửa hàng")
                           ]),
                           _vm._v(" "),
                           _c("option", { attrs: { value: "2" } }, [
@@ -90912,14 +90922,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-6" }, [_c("h1", [_vm._v("Add")])])
+    return _c("div", { staticClass: "col-sm-6" }, [_c("h1", [_vm._v("Thêm")])])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h3", { staticClass: "card-title" }, [_vm._v("From Create")])
+      _c("h3", { staticClass: "card-title" }, [_vm._v("Ngày thêm")])
     ])
   },
   function() {
@@ -90930,7 +90940,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-        [_vm._v("Submit")]
+        [_vm._v("Thêm")]
       )
     ])
   }
@@ -92047,7 +92057,7 @@ var render = function() {
       _c("div", { staticClass: "wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30" }, [
         _c("form", { staticClass: "login100-form validate-form" }, [
           _c("span", { staticClass: "login100-form-title p-b-37" }, [
-            _vm._v("\n\t\t\t\t\tLogin\n\t\t\t\t")
+            _vm._v("\n\t\t\t\t\tĐăng nhập\n\t\t\t\t")
           ]),
           _vm._v(" "),
           _c(
@@ -92079,7 +92089,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "input100",
-                attrs: { type: "text", placeholder: "Username or email" },
+                attrs: { type: "text", placeholder: "SĐT hoặc email" },
                 domProps: { value: _vm.data.username },
                 on: {
                   input: function($event) {
@@ -92124,7 +92134,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "input100",
-                attrs: { type: "password", placeholder: "Password" },
+                attrs: { type: "password", placeholder: "Mật khẩu" },
                 domProps: { value: _vm.data.password },
                 on: {
                   input: function($event) {
@@ -92157,7 +92167,7 @@ var render = function() {
               [
                 _vm._v(
                   "\n\t\t\t\t\t\t" +
-                    _vm._s(_vm.isLogging ? "Loging....." : "Login") +
+                    _vm._s(_vm.isLogging ? "Loging....." : "Đăng nhập") +
                     "\n\t\t\t\t\t"
                 )
               ]
@@ -92353,7 +92363,7 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("li", { staticClass: "breadcrumb-item active" }, [
-                _vm._v("Add group product")
+                _vm._v("Thêm nhóm sản phẩm")
               ])
             ])
           ])
@@ -92389,7 +92399,7 @@ var render = function() {
                     _c("div", { staticClass: "card-body" }, [
                       _c("div", { staticClass: "form-group" }, [
                         _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                          _vm._v("Name Group Product")
+                          _vm._v("Tên nhóm sản phẩm")
                         ]),
                         _vm._v(" "),
                         _c("input", {
@@ -92443,7 +92453,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", [_vm._v("Add Group Product")])
+      _c("h1", [_vm._v("Thêm nhóm sản phẩm")])
     ])
   },
   function() {
@@ -92452,7 +92462,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
-        _vm._v("From Create Group Product")
+        _vm._v("Bảng thêm nhóm sản phẩm")
       ])
     ])
   },
@@ -92464,7 +92474,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-        [_vm._v("\r\n                      Add   \r\n                  ")]
+        [_vm._v("\r\n                      Thêm \r\n                  ")]
       )
     ])
   }
@@ -92575,6 +92585,27 @@ exports.push([module.i, "\n.has-search .form-control[data-v-44fee954] {\n       
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -92952,8 +92983,8 @@ var render = function() {
                                           ]),
                                           _vm._v(" "),
                                           data.type == 0
-                                            ? _c("td", [_vm._v("Delivery")])
-                                            : _c("td", [_vm._v("Credit")]),
+                                            ? _c("td", [_vm._v("Vận chuyển")])
+                                            : _c("td", [_vm._v("Thẻ VNPAY")]),
                                           _vm._v(" "),
                                           data.type === 0
                                             ? _c("td", {}, [
@@ -92971,19 +93002,15 @@ var render = function() {
                                                       }
                                                     }
                                                   },
-                                                  [_vm._v("Cancel")]
+                                                  [
+                                                    _c("i", {
+                                                      staticClass:
+                                                        "fas fa-trash-alt"
+                                                    })
+                                                  ]
                                                 )
                                               ])
-                                            : _c("td", {}, [
-                                                _c(
-                                                  "button",
-                                                  {
-                                                    staticClass:
-                                                      "btn btn-default"
-                                                  },
-                                                  [_vm._v(" Cancel")]
-                                                )
-                                              ]),
+                                            : _c("td", {}, [_vm._m(3, true)]),
                                           _vm._v(" "),
                                           _c(
                                             "td",
@@ -93001,31 +93028,121 @@ var render = function() {
                                                     }
                                                   }
                                                 },
-                                                [_vm._v("Detail")]
+                                                [
+                                                  _c("i", {
+                                                    staticClass: "fas fa-eye"
+                                                  })
+                                                ]
                                               )
                                             ]
                                           ),
                                           _vm._v(" "),
-                                          _c(
-                                            "td",
-                                            { staticClass: "sorting_1" },
-                                            [
-                                              _c(
-                                                "button",
-                                                {
-                                                  staticClass:
-                                                    "btn btn-success",
-                                                  on: {
-                                                    click: function($event) {
-                                                      $event.preventDefault()
-                                                      return _vm.cofirm(data.id)
-                                                    }
-                                                  }
-                                                },
-                                                [_vm._v("Confirm")]
-                                              )
-                                            ]
-                                          )
+                                          _vm._m(4, true),
+                                          _vm._v(" "),
+                                          _c("td", [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass: "modal fade",
+                                                attrs: {
+                                                  id: "exampleModalCenter",
+                                                  tabindex: "-1",
+                                                  role: "dialog",
+                                                  "aria-labelledby":
+                                                    "exampleModalCenterTitle",
+                                                  "aria-hidden": "true"
+                                                }
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "modal-dialog modal-dialog-centered",
+                                                    attrs: { role: "document" }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "modal-content"
+                                                      },
+                                                      [
+                                                        _vm._m(5, true),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "modal-body"
+                                                          },
+                                                          [
+                                                            _vm._v(
+                                                              "\n                                                                        Đơn hàng sẽ không được hoàn trả bạn có muốn chắc đặt nó?\n                                                                    "
+                                                            )
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "modal-footer"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "button",
+                                                              {
+                                                                staticClass:
+                                                                  "btn btn-danger",
+                                                                attrs: {
+                                                                  type:
+                                                                    "button",
+                                                                  "data-dismiss":
+                                                                    "modal"
+                                                                }
+                                                              },
+                                                              [_vm._v("Đóng!")]
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "button",
+                                                              {
+                                                                staticClass:
+                                                                  "btn btn-primary",
+                                                                attrs: {
+                                                                  type:
+                                                                    "button",
+                                                                  "data-dismiss":
+                                                                    "modal"
+                                                                },
+                                                                on: {
+                                                                  click: function(
+                                                                    $event
+                                                                  ) {
+                                                                    $event.preventDefault()
+                                                                    return _vm.cofirm(
+                                                                      data.id
+                                                                    )
+                                                                  }
+                                                                }
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "Đặt hàng"
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          ])
                                         ]
                                       )
                                     }),
@@ -93054,7 +93171,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("List Order")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Danh sách đơn hàng")])
     ])
   },
   function() {
@@ -93064,7 +93181,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
         _vm._v(
-          "\n                                                        DataTable All order products\n                                                    "
+          "\n                                                        Dữ liệu danh sách đơn hàng\n                                                    "
         )
       ])
     ])
@@ -93104,7 +93221,7 @@ var staticRenderFns = [
               "aria-sort": "descending"
             }
           },
-          [_vm._v("Name")]
+          [_vm._v("Tên")]
         ),
         _vm._v(" "),
         _c(
@@ -93119,7 +93236,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Image")]
+          [_vm._v("Hình")]
         ),
         _vm._v(" "),
         _c(
@@ -93134,7 +93251,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Price")]
+          [_vm._v("Giá")]
         ),
         _vm._v(" "),
         _c(
@@ -93149,7 +93266,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Amount")]
+          [_vm._v("Số lượng")]
         ),
         _vm._v(" "),
         _c(
@@ -93164,7 +93281,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Delivery price")]
+          [_vm._v("Giá vận chuyển")]
         ),
         _vm._v(" "),
         _c(
@@ -93179,7 +93296,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Total price")]
+          [_vm._v("tổng tiền")]
         ),
         _vm._v(" "),
         _c(
@@ -93194,7 +93311,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Payment")]
+          [_vm._v("Thanh toán")]
         ),
         _vm._v(" "),
         _c(
@@ -93209,7 +93326,7 @@ var staticRenderFns = [
               "aria-label": "CSS grade: activate to sort column ascending"
             }
           },
-          [_vm._v("Delete")]
+          [_vm._v("Xóa")]
         ),
         _vm._v(" "),
         _c(
@@ -93224,7 +93341,7 @@ var staticRenderFns = [
               "aria-label": "CSS grade: activate to sort column ascending"
             }
           },
-          [_vm._v("See More")]
+          [_vm._v("Xem")]
         ),
         _vm._v(" "),
         _c(
@@ -93239,9 +93356,61 @@ var staticRenderFns = [
               "aria-label": "CSS grade: activate to sort column ascending"
             }
           },
-          [_vm._v("Cofirm")]
+          [_vm._v("Xác nhận")]
         )
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("button", { staticClass: "btn btn-default" }, [
+      _c("i", { staticClass: "fas fa-trash-alt" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "sorting_1" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary",
+          attrs: {
+            type: "button",
+            "data-toggle": "modal",
+            "data-target": "#exampleModalCenter"
+          }
+        },
+        [_c("i", { staticClass: "fas fa-check" })]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        { staticClass: "modal-title", attrs: { id: "exampleModalLongTitle" } },
+        [_vm._v("Xác nhận đơn hàng?")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
     ])
   }
 ]
@@ -93663,7 +93832,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Details")
+                  _vm._v("Chi tiết")
                 ])
               ])
             ])
@@ -93827,7 +93996,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Details")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Chi tiết")])
     ])
   }
 ]
@@ -94266,8 +94435,8 @@ var render = function() {
                                           ]),
                                           _vm._v(" "),
                                           data.type == 0
-                                            ? _c("td", [_vm._v("Delivery")])
-                                            : _c("td", [_vm._v("Credit")])
+                                            ? _c("td", [_vm._v("Vận chuyển")])
+                                            : _c("td", [_vm._v("Thẻ VNPAY")])
                                         ]
                                       )
                                     }),
@@ -94296,7 +94465,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("List Order")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [
+        _vm._v("Danh sách đơn hàng được chấp nhận")
+      ])
     ])
   },
   function() {
@@ -94306,7 +94477,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
         _vm._v(
-          "\n                                                        DataTable All order approved\n                                                    "
+          "\n                                                       Dữ liệu đơn hàng được chấp nhận\n                                                    "
         )
       ])
     ])
@@ -94346,7 +94517,7 @@ var staticRenderFns = [
               "aria-sort": "descending"
             }
           },
-          [_vm._v("Name")]
+          [_vm._v("Tên")]
         ),
         _vm._v(" "),
         _c(
@@ -94361,7 +94532,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Image")]
+          [_vm._v("Hình")]
         ),
         _vm._v(" "),
         _c(
@@ -94376,7 +94547,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Price")]
+          [_vm._v("Giá")]
         ),
         _vm._v(" "),
         _c(
@@ -94391,7 +94562,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Amount")]
+          [_vm._v("Số lượng")]
         ),
         _vm._v(" "),
         _c(
@@ -94406,7 +94577,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Delivery price")]
+          [_vm._v("Giá vận chuyển")]
         ),
         _vm._v(" "),
         _c(
@@ -94421,7 +94592,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Total price")]
+          [_vm._v("Tổng giá")]
         ),
         _vm._v(" "),
         _c(
@@ -94436,7 +94607,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Payment")]
+          [_vm._v("Thanh toán")]
         )
       ])
     ])
@@ -94877,8 +95048,8 @@ var render = function() {
                                           ]),
                                           _vm._v(" "),
                                           data.type == 0
-                                            ? _c("td", [_vm._v("Delivery")])
-                                            : _c("td", [_vm._v("Credit")])
+                                            ? _c("td", [_vm._v("Vận chuyển")])
+                                            : _c("td", [_vm._v("Thẻ VNPAY")])
                                         ]
                                       )
                                     }),
@@ -94907,7 +95078,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("List Order")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [
+        _vm._v("Danh sách đơn hàng bị hủy")
+      ])
     ])
   },
   function() {
@@ -94917,7 +95090,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
         _vm._v(
-          "\n                                                        DataTable All order is canceled\n                                                    "
+          "\n                                                        Dữ liệu đơn hàng bị hủy\n                                                    "
         )
       ])
     ])
@@ -94957,7 +95130,7 @@ var staticRenderFns = [
               "aria-sort": "descending"
             }
           },
-          [_vm._v("Name")]
+          [_vm._v("Tên")]
         ),
         _vm._v(" "),
         _c(
@@ -94972,7 +95145,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Image")]
+          [_vm._v("Hình")]
         ),
         _vm._v(" "),
         _c(
@@ -94987,7 +95160,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Price")]
+          [_vm._v("Giá")]
         ),
         _vm._v(" "),
         _c(
@@ -95002,7 +95175,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Amount")]
+          [_vm._v("Số lượng")]
         ),
         _vm._v(" "),
         _c(
@@ -95017,7 +95190,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Delivery price")]
+          [_vm._v("Giá vận chuyển")]
         ),
         _vm._v(" "),
         _c(
@@ -95032,7 +95205,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Total price")]
+          [_vm._v("Tổng giá")]
         ),
         _vm._v(" "),
         _c(
@@ -95047,7 +95220,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Payment")]
+          [_vm._v("Thanh toán")]
         )
       ])
     ])
@@ -95264,6 +95437,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 // add to component
@@ -95371,7 +95545,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Product")
+                  _vm._v("sản phẩm")
                 ])
               ])
             ])
@@ -95509,7 +95683,11 @@ var render = function() {
                                                     }
                                                   }
                                                 },
-                                                [_vm._v("Detail")]
+                                                [
+                                                  _c("i", {
+                                                    staticClass: "fas fa-eye"
+                                                  })
+                                                ]
                                               )
                                             ]
                                           ),
@@ -95528,7 +95706,12 @@ var render = function() {
                                                   }
                                                 }
                                               },
-                                              [_vm._v("Delete")]
+                                              [
+                                                _c("i", {
+                                                  staticClass:
+                                                    "fas fa-trash-alt"
+                                                })
+                                              ]
                                             )
                                           ])
                                         ]
@@ -95559,7 +95742,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("List Product")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Danh sách sản phẩm")])
     ])
   },
   function() {
@@ -95569,7 +95752,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
         _vm._v(
-          "\n                                                        DataTable All shop products\n                                                    "
+          "\n                                                        Dữ liệu danh sách sản phẩm\n                                                    "
         )
       ])
     ])
@@ -95609,7 +95792,7 @@ var staticRenderFns = [
               "aria-sort": "descending"
             }
           },
-          [_vm._v("Name")]
+          [_vm._v("Tên")]
         ),
         _vm._v(" "),
         _c(
@@ -95624,7 +95807,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Image")]
+          [_vm._v("Hình")]
         ),
         _vm._v(" "),
         _c(
@@ -95639,7 +95822,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Price")]
+          [_vm._v("Giá")]
         ),
         _vm._v(" "),
         _c(
@@ -95654,7 +95837,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Amount")]
+          [_vm._v("Số lượng")]
         ),
         _vm._v(" "),
         _c(
@@ -95669,7 +95852,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Discount")]
+          [_vm._v("Giảm giá")]
         ),
         _vm._v(" "),
         _c(
@@ -95684,7 +95867,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Lastday")]
+          [_vm._v("Ngày kết thúc")]
         ),
         _vm._v(" "),
         _c(
@@ -95699,7 +95882,7 @@ var staticRenderFns = [
               "aria-label": "CSS grade: activate to sort column ascending"
             }
           },
-          [_vm._v("Information")]
+          [_vm._v("Xem")]
         ),
         _vm._v(" "),
         _c(
@@ -95714,7 +95897,7 @@ var staticRenderFns = [
               "aria-label": "CSS grade: activate to sort column ascending"
             }
           },
-          [_vm._v("Delete")]
+          [_vm._v("Xóa")]
         )
       ])
     ])
@@ -96119,7 +96302,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Details")
+                  _vm._v("Chi tiết")
                 ])
               ])
             ])
@@ -96205,7 +96388,7 @@ var render = function() {
                   _c("div", { staticClass: "rating" }, [
                     _c("div", { staticClass: "stars" }, [
                       _c("span", {}, [
-                        _vm._v("Rating: " + _vm._s(_vm.datas[0].rating))
+                        _vm._v("Sô sao: " + _vm._s(_vm.datas[0].rating))
                       ]),
                       _vm._v(" "),
                       _c("span", { staticClass: "fa fa-star checked" })
@@ -96213,17 +96396,19 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("p", { staticClass: "product-description" }, [
-                    _vm._v("Description: " + _vm._s(_vm.datas[0].description))
+                    _vm._v("Mô tả: " + _vm._s(_vm.datas[0].description))
                   ]),
                   _vm._v(" "),
                   _c("p", [
-                    _vm._v("Price: "),
+                    _vm._v("Giá: "),
                     _c("span", [_vm._v(_vm._s(_vm.datas[0].price) + " Vnd")])
                   ]),
                   _vm._v(" "),
-                  _c("p", [_vm._v(" Amount: " + _vm._s(_vm.datas[0].amount))]),
+                  _c("p", [
+                    _vm._v(" Số lượng: " + _vm._s(_vm.datas[0].amount))
+                  ]),
                   _vm._v(" "),
-                  _c("p", [_vm._v(" Create: " + _vm._s(_vm.datas[0].create))])
+                  _c("p", [_vm._v(" Ngày tạo: " + _vm._s(_vm.datas[0].create))])
                 ])
               ])
             ])
@@ -96239,7 +96424,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Details")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Chi tiết")])
     ])
   }
 ]
@@ -96571,7 +96756,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Product")
+                  _vm._v("Bình luận")
                 ])
               ])
             ])
@@ -96695,7 +96880,12 @@ var render = function() {
                                                   }
                                                 }
                                               },
-                                              [_vm._v("Delete")]
+                                              [
+                                                _c("i", {
+                                                  staticClass:
+                                                    "fas fa-trash-alt"
+                                                })
+                                              ]
                                             )
                                           ])
                                         ]
@@ -96726,7 +96916,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("List Product")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [
+        _vm._v("Danh sách bình luận")
+      ])
     ])
   },
   function() {
@@ -96736,7 +96928,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
         _vm._v(
-          "\n                                                        DataTable All shop products\n                                                    "
+          "\n                                                        Dữ liệu bình luận.\n                                                    "
         )
       ])
     ])
@@ -96776,7 +96968,7 @@ var staticRenderFns = [
               "aria-sort": "descending"
             }
           },
-          [_vm._v("Name Shop")]
+          [_vm._v("Tên cửa hàng")]
         ),
         _vm._v(" "),
         _c(
@@ -96791,7 +96983,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Name Customer")]
+          [_vm._v("Tên khách hàng")]
         ),
         _vm._v(" "),
         _c(
@@ -96806,7 +96998,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Content")]
+          [_vm._v("Nội dung")]
         ),
         _vm._v(" "),
         _c(
@@ -96821,7 +97013,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Rating")]
+          [_vm._v("Số sao")]
         ),
         _vm._v(" "),
         _c(
@@ -96836,7 +97028,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Create")]
+          [_vm._v("Ngày tạo")]
         ),
         _vm._v(" "),
         _c(
@@ -96851,7 +97043,7 @@ var staticRenderFns = [
               "aria-label": "CSS grade: activate to sort column ascending"
             }
           },
-          [_vm._v("Delete")]
+          [_vm._v("Xóa")]
         )
       ])
     ])
@@ -97066,7 +97258,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           _this.datacollection = {
             labels: labels,
             datasets: [{
-              label: "Totals Rating",
+              label: "Tổng đánh giá",
               backgroundColor: "rgba(255, 0, 0, 0.25)",
               data: Count
             }]
@@ -113833,7 +114025,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Chart")
+                  _vm._v("Biểu đồ")
                 ])
               ])
             ])
@@ -113855,7 +114047,7 @@ var render = function() {
                 staticClass: " col-form-label ",
                 staticStyle: { width: "100px" }
               },
-              [_vm._v("Select Year")]
+              [_vm._v("Chọn năm")]
             ),
             _vm._v(" "),
             _c(
@@ -113908,7 +114100,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Chart Bar")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [
+        _vm._v("Biểu đồ 4 nhóm sản phẩm được mua nhiều nhất.")
+      ])
     ])
   }
 ]
@@ -114121,7 +114315,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           _this.datacollection = {
             labels: labels,
             datasets: [{
-              label: "Totals Rating",
+              label: "Tổng đánh giá",
               backgroundColor: "rgba(255, 0, 0, 0.25)",
               data: Count
             }]
@@ -114164,7 +114358,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Chart")
+                  _vm._v("Biểu đồ")
                 ])
               ])
             ])
@@ -114186,7 +114380,7 @@ var render = function() {
                 staticClass: " col-form-label ",
                 staticStyle: { width: "100px" }
               },
-              [_vm._v("Select Year")]
+              [_vm._v("Chọn năm")]
             ),
             _vm._v(" "),
             _c(
@@ -114239,7 +114433,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Chart Bar")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [
+        _vm._v("Biểu đồ cửa hàng có doanh thu cao nhất.")
+      ])
     ])
   }
 ]
@@ -114428,7 +114624,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           _this.datacollection = {
             labels: labels,
             datasets: [{
-              label: "Totals Post",
+              label: "Tổng đánh giá",
 
               borderColor: "#05CBE1",
               pointBackgroundColor: "white",
@@ -114562,7 +114758,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Account")
+                  _vm._v("Biểu đồ")
                 ])
               ])
             ])
@@ -114584,7 +114780,7 @@ var render = function() {
                 staticClass: " col-form-label ",
                 staticStyle: { width: "100px" }
               },
-              [_vm._v("Select Year")]
+              [_vm._v("Chọn năm")]
             ),
             _vm._v(" "),
             _c(
@@ -114636,7 +114832,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Account")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [
+        _vm._v("Biểu đồ doanh thu qua từng tháng")
+      ])
     ])
   }
 ]
@@ -117246,7 +117444,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this3 = this;
 
             var uri = 'http://127.0.0.1:8000/api/shop/post/delete/' + id;
-            this.axios.delete(uri).then(function (response) {
+            this.axios.post(uri).then(function (response) {
                 _this3.datas.splice(_this3.datas.map(function (item) {
                     return item.id;
                 }).indexOf(id), 1);
@@ -117297,7 +117495,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Product")
+                  _vm._v("Sản phẩm")
                 ])
               ])
             ])
@@ -117319,10 +117517,10 @@ var render = function() {
                       {
                         staticClass:
                           "btn btn-success waves-effect waves-light m-r-10",
-                        staticStyle: { width: "80px" },
+                        staticStyle: { width: "100px" },
                         attrs: { to: { path: "/shop/home/create" } }
                       },
-                      [_vm._v("Add \n                                ")]
+                      [_c("i", { staticClass: "nav-icon fas fa-plus" })]
                     ),
                     _vm._v(" "),
                     _c("br"),
@@ -117459,7 +117657,11 @@ var render = function() {
                                                       }
                                                     }
                                                   },
-                                                  [_vm._v("Update")]
+                                                  [
+                                                    _c("i", {
+                                                      staticClass: "fas fa-edit"
+                                                    })
+                                                  ]
                                                 )
                                               ]
                                             ),
@@ -117482,7 +117684,11 @@ var render = function() {
                                                       }
                                                     }
                                                   },
-                                                  [_vm._v("Detail")]
+                                                  [
+                                                    _c("i", {
+                                                      staticClass: "fas fa-eye"
+                                                    })
+                                                  ]
                                                 )
                                               ]
                                             ),
@@ -117501,7 +117707,12 @@ var render = function() {
                                                     }
                                                   }
                                                 },
-                                                [_vm._v("Delete")]
+                                                [
+                                                  _c("i", {
+                                                    staticClass:
+                                                      "fas fa-trash-alt"
+                                                  })
+                                                ]
                                               )
                                             ])
                                           ]
@@ -117534,7 +117745,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("List Product")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Danh sách sản phẩm")])
     ])
   },
   function() {
@@ -117544,7 +117755,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
         _vm._v(
-          "\n                                                        DataTable All shop products\n                                                    "
+          "\n                                                        Dữ liệu danh sách sản phẩm\n                                                    "
         )
       ])
     ])
@@ -117584,7 +117795,7 @@ var staticRenderFns = [
               "aria-sort": "descending"
             }
           },
-          [_vm._v("Name")]
+          [_vm._v("Tên")]
         ),
         _vm._v(" "),
         _c(
@@ -117599,7 +117810,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Image")]
+          [_vm._v("Hình")]
         ),
         _vm._v(" "),
         _c(
@@ -117614,7 +117825,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Price")]
+          [_vm._v("Giá")]
         ),
         _vm._v(" "),
         _c(
@@ -117629,7 +117840,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Amount")]
+          [_vm._v("Số lượng")]
         ),
         _vm._v(" "),
         _c(
@@ -117644,7 +117855,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Discount")]
+          [_vm._v("Giảm giá")]
         ),
         _vm._v(" "),
         _c(
@@ -117659,7 +117870,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Lastday")]
+          [_vm._v("Ngày kết thúc")]
         ),
         _vm._v(" "),
         _c(
@@ -117674,7 +117885,7 @@ var staticRenderFns = [
               "aria-label": "CSS grade: activate to sort column ascending"
             }
           },
-          [_vm._v("Update")]
+          [_vm._v("Sửa")]
         ),
         _vm._v(" "),
         _c(
@@ -117689,7 +117900,7 @@ var staticRenderFns = [
               "aria-label": "CSS grade: activate to sort column ascending"
             }
           },
-          [_vm._v("Detail  ")]
+          [_vm._v("Xem ")]
         ),
         _vm._v(" "),
         _c(
@@ -117704,7 +117915,7 @@ var staticRenderFns = [
               "aria-label": "CSS grade: activate to sort column ascending"
             }
           },
-          [_vm._v("Delete")]
+          [_vm._v("Xóa")]
         )
       ])
     ])
@@ -117969,7 +118180,7 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("li", { staticClass: "breadcrumb-item active" }, [
-                _vm._v("Add Product")
+                _vm._v("Thêm sản phẩm")
               ])
             ])
           ])
@@ -117999,7 +118210,7 @@ var render = function() {
                   _c("div", { staticClass: "card-body" }, [
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                        _vm._v("Name product")
+                        _vm._v("Tên sản phẩm")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -118015,7 +118226,7 @@ var render = function() {
                         attrs: {
                           type: "text",
                           id: "exampleInputEmail1",
-                          placeholder: "Enter name of product"
+                          placeholder: "Tên của sản phẩm"
                         },
                         domProps: { value: _vm.add.nameproduct },
                         on: {
@@ -118035,7 +118246,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-                        _vm._v("Price Product")
+                        _vm._v("Giá sản phẩm")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -118051,7 +118262,7 @@ var render = function() {
                         attrs: {
                           type: "text",
                           id: "exampleInputPassword1",
-                          placeholder: "Enter price of product (vd: 200000) vnd"
+                          placeholder: "Giá của sản phẩm (vd: 200000) vnd"
                         },
                         domProps: { value: _vm.add.priceproduct },
                         on: {
@@ -118073,7 +118284,7 @@ var render = function() {
                       _c(
                         "label",
                         { attrs: { for: "exampleFormControlTextarea1" } },
-                        [_vm._v("Description")]
+                        [_vm._v("Mô tả")]
                       ),
                       _vm._v(" "),
                       _c("textarea", {
@@ -118088,7 +118299,7 @@ var render = function() {
                         staticClass: "form-control",
                         attrs: {
                           id: "exampleFormControlTextarea1",
-                          placeholder: "Describe yourself here...",
+                          placeholder: "Mô tả sản phẩm của bạn...",
                           rows: "3"
                         },
                         domProps: { value: _vm.add.description },
@@ -118109,7 +118320,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-                        _vm._v("Amount Product")
+                        _vm._v("Số lượng")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -118125,7 +118336,7 @@ var render = function() {
                         attrs: {
                           type: "text",
                           id: "exampleInputPassword1",
-                          placeholder: "Enter amount product"
+                          placeholder: "Sô lượng của sản phẩm"
                         },
                         domProps: { value: _vm.add.amountproduct },
                         on: {
@@ -118186,7 +118397,7 @@ var render = function() {
                           staticClass: "col-2 col-form-label",
                           attrs: { for: "example-date-input" }
                         },
-                        [_vm._v("Date")]
+                        [_vm._v("Ngày")]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-10" }, [
@@ -118220,7 +118431,7 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
-                      _c("label", [_vm._v("Minimal")]),
+                      _c("label", [_vm._v("Nhóm")]),
                       _vm._v(" "),
                       _c(
                         "select",
@@ -118268,7 +118479,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                        _vm._v("Choose images")
+                        _vm._v("Chọn hình ảnh sản phẩm")
                       ]),
                       _vm._v(" "),
                       _c(
@@ -118332,7 +118543,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", [_vm._v("Add Product")])
+      _c("h1", [_vm._v("Thêm sản phẩm")])
     ])
   },
   function() {
@@ -118340,7 +118551,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h3", { staticClass: "card-title" }, [_vm._v("From Create")])
+      _c("h3", { staticClass: "card-title" }, [_vm._v("Bảng tạo sản phẩm")])
     ])
   },
   function() {
@@ -118351,7 +118562,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-        [_vm._v("Submit")]
+        [_vm._v("Thêm sản phẩm")]
       )
     ])
   }
@@ -118580,7 +118791,7 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("li", { staticClass: "breadcrumb-item active" }, [
-                _vm._v("Add Product")
+                _vm._v("Cập nhật sản phẩm")
               ])
             ])
           ])
@@ -118610,7 +118821,7 @@ var render = function() {
                   _c("div", { staticClass: "card-body" }, [
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                        _vm._v("Name product")
+                        _vm._v("Tên sản phẩm")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -118627,7 +118838,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-                        _vm._v("Price Product")
+                        _vm._v("Giá")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -118646,7 +118857,7 @@ var render = function() {
                       _c(
                         "label",
                         { attrs: { for: "exampleFormControlTextarea1" } },
-                        [_vm._v("Description")]
+                        [_vm._v("Mô tả")]
                       ),
                       _vm._v(" "),
                       _c("textarea", {
@@ -118663,7 +118874,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-                        _vm._v("Amount Product")
+                        _vm._v("Số lượng")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -118680,7 +118891,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-                        _vm._v("Discount Product")
+                        _vm._v("Giảm giá")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -118702,7 +118913,7 @@ var render = function() {
                           staticClass: "col-2 col-form-label",
                           attrs: { for: "example-date-input" }
                         },
-                        [_vm._v("Date")]
+                        [_vm._v("Ngày")]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-10" }, [
@@ -118721,7 +118932,7 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
-                      _c("label", [_vm._v("Minimal")]),
+                      _c("label", [_vm._v("Nhóm")]),
                       _vm._v(" "),
                       _c(
                         "select",
@@ -118788,7 +118999,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", [_vm._v("Add Product")])
+      _c("h1", [_vm._v("Cập nhật sản phẩm")])
     ])
   },
   function() {
@@ -118796,7 +119007,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h3", { staticClass: "card-title" }, [_vm._v("From Create")])
+      _c("h3", { staticClass: "card-title" }, [
+        _vm._v("Bảng cập nhật sản phẩm")
+      ])
     ])
   },
   function() {
@@ -118807,7 +119020,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-        [_vm._v("Submit")]
+        [_vm._v("Cập nhật sản phẩm")]
       )
     ])
   }
@@ -119211,7 +119424,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Details")
+                  _vm._v("Chi tiết")
                 ])
               ])
             ])
@@ -119297,7 +119510,7 @@ var render = function() {
                   _c("div", { staticClass: "rating" }, [
                     _c("div", { staticClass: "stars" }, [
                       _c("span", {}, [
-                        _vm._v("Rating: " + _vm._s(_vm.datas[0].rating))
+                        _vm._v("Số sao: " + _vm._s(_vm.datas[0].rating))
                       ]),
                       _vm._v(" "),
                       _c("span", { staticClass: "fa fa-star checked" })
@@ -119305,17 +119518,19 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("p", { staticClass: "product-description" }, [
-                    _vm._v("Description: " + _vm._s(_vm.datas[0].description))
+                    _vm._v("Mô tả: " + _vm._s(_vm.datas[0].description))
                   ]),
                   _vm._v(" "),
                   _c("p", [
-                    _vm._v("Price: "),
+                    _vm._v("Giá: "),
                     _c("span", [_vm._v(_vm._s(_vm.datas[0].price) + " Vnd")])
                   ]),
                   _vm._v(" "),
-                  _c("p", [_vm._v(" Amount: " + _vm._s(_vm.datas[0].amount))]),
+                  _c("p", [
+                    _vm._v(" Số lượng: " + _vm._s(_vm.datas[0].amount))
+                  ]),
                   _vm._v(" "),
-                  _c("p", [_vm._v(" Create: " + _vm._s(_vm.datas[0].create))])
+                  _c("p", [_vm._v(" Ngày tạo: " + _vm._s(_vm.datas[0].create))])
                 ])
               ])
             ])
@@ -119331,7 +119546,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Details")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Chi tiết sản phẩm")])
     ])
   }
 ]
@@ -119478,9 +119693,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         addFee: function addFee() {
             var _this2 = this;
 
-            // console.log(localStorage.getItem('id'));
-            // console.log(this.datas[0].fee);
-            // console.log(this.datas[0].price);
+            console.log(localStorage.getItem('id'));
+            console.log(this.datas[0].fee);
+            console.log(this.datas[0].price);
             var uri = 'http://127.0.0.1:8000/api/shop/post/addfee/' + localStorage.getItem('id');
             this.axios.post(uri, this.datas[0]).then(function (response) {
                 if (response.data == "successfully update") {
@@ -119526,7 +119741,7 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("li", { staticClass: "breadcrumb-item active" }, [
-                _vm._v("Add Transport Fee")
+                _vm._v("Thêm phí vận chuyển")
               ])
             ])
           ])
@@ -119562,7 +119777,7 @@ var render = function() {
                     _c("div", { staticClass: "card-body" }, [
                       _c("div", { staticClass: "form-group" }, [
                         _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                          _vm._v("Minimum amount to be free delivery")
+                          _vm._v("Số tiền tối thiểu để được giao hàng miễn phí")
                         ]),
                         _vm._v(" "),
                         _c("input", {
@@ -119579,7 +119794,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("div", { staticClass: "form-group" }, [
                         _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                          _vm._v("Otherwise: Transport Fee")
+                          _vm._v("Nếu không: Phí vận chuyển")
                         ]),
                         _vm._v(" "),
                         _c("input", {
@@ -119614,7 +119829,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", [_vm._v("Add Transport Fee")])
+      _c("h1", [_vm._v("Thêm phí vận chuyển")])
     ])
   },
   function() {
@@ -119623,7 +119838,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
-        _vm._v("From Add Transport Fee")
+        _vm._v("Bảng thêm phí vận chuyển")
       ])
     ])
   },
@@ -119635,7 +119850,11 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-        [_vm._v("\r\n                      Submit   \r\n                  ")]
+        [
+          _vm._v(
+            "\r\n                     Thêm phí vận chuyển\r\n                  "
+          )
+        ]
       )
     ])
   }
@@ -120111,7 +120330,7 @@ var render = function() {
                     { staticClass: "breadcrumb-item" },
                     [
                       _c("router-link", { attrs: { to: "/shop/home" } }, [
-                        _vm._v("Home")
+                        _vm._v("Trang chủ")
                       ])
                     ],
                     1
@@ -120139,7 +120358,7 @@ var render = function() {
                           staticClass: "rounded-circle",
                           attrs: {
                             src: this.datas[0].img,
-                            alt: "Admin",
+                            alt: "Shop",
                             width: "150"
                           }
                         }),
@@ -120148,7 +120367,7 @@ var render = function() {
                           _c("h4", [_vm._v(_vm._s(this.datas[0].nameShop))]),
                           _vm._v(" "),
                           _c("span", { staticClass: "text-secondary mb-1" }, [
-                            _c("b", [_vm._v("Rating:")]),
+                            _c("b", [_vm._v("Đánh giá:")]),
                             _vm._v(
                               " " + _vm._s(this.datas[0].ratingShop) + " "
                             ),
@@ -120166,7 +120385,7 @@ var render = function() {
                             "span",
                             { staticClass: "text-muted font-size-sm" },
                             [
-                              _c("b", [_vm._v("Follow:")]),
+                              _c("b", [_vm._v("Theo dõi:")]),
                               _vm._v(" " + _vm._s(this.datas[0].follow) + " ")
                             ]
                           ),
@@ -120181,7 +120400,7 @@ var render = function() {
                                 }
                               }
                             },
-                            [_vm._v("Update Profile")]
+                            [_vm._v("Cập nhật hồ sơ")]
                           )
                         ])
                       ]
@@ -120550,7 +120769,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Store Information")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Thông tin cửa hàng")])
     ])
   },
   function() {
@@ -120563,7 +120782,7 @@ var staticRenderFns = [
         staticClass: "breadcrumb-item active",
         attrs: { "aria-current": "page" }
       },
-      [_c("span", [_vm._v("User")])]
+      [_c("span", [_vm._v("Tài khoản")])]
     )
   },
   function() {
@@ -120576,7 +120795,7 @@ var staticRenderFns = [
         staticClass: "breadcrumb-item active",
         attrs: { "aria-current": "page" }
       },
-      [_c("span", [_vm._v("Profile")])]
+      [_c("span", [_vm._v("Hồ sơ")])]
     )
   },
   function() {
@@ -120584,7 +120803,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-3" }, [
-      _c("h6", { staticClass: "mb-0" }, [_vm._v("Full Name")])
+      _c("h6", { staticClass: "mb-0" }, [_vm._v("Họ và tên")])
     ])
   },
   function() {
@@ -120600,7 +120819,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-3" }, [
-      _c("h6", { staticClass: "mb-0" }, [_vm._v("Phone")])
+      _c("h6", { staticClass: "mb-0" }, [_vm._v("SĐT")])
     ])
   },
   function() {
@@ -120608,7 +120827,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-3" }, [
-      _c("h6", { staticClass: "mb-0" }, [_vm._v("Mobile")])
+      _c("h6", { staticClass: "mb-0" }, [_vm._v("Gmail")])
     ])
   },
   function() {
@@ -120616,7 +120835,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-3" }, [
-      _c("h6", { staticClass: "mb-0" }, [_vm._v("Address")])
+      _c("h6", { staticClass: "mb-0" }, [_vm._v("Địa chỉ")])
     ])
   },
   function() {
@@ -120624,7 +120843,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-3" }, [
-      _c("h6", { staticClass: "mb-0" }, [_vm._v("Description")])
+      _c("h6", { staticClass: "mb-0" }, [_vm._v("Mô tả")])
     ])
   },
   function() {
@@ -120632,7 +120851,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-3" }, [
-      _c("h6", { staticClass: "mb-0" }, [_vm._v("Credit Card ")])
+      _c("h6", { staticClass: "mb-0" }, [_vm._v("Tên chủ thẻ VNPAY")])
     ])
   },
   function() {
@@ -120640,7 +120859,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-3" }, [
-      _c("h6", { staticClass: "mb-0" }, [_vm._v("       Number Card ")])
+      _c("h6", { staticClass: "mb-0" }, [_vm._v("       Số PIN ")])
     ])
   },
   function() {
@@ -120648,7 +120867,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-3" }, [
-      _c("h6", { staticClass: "mb-0" }, [_vm._v("       Expiry Date ")])
+      _c("h6", { staticClass: "mb-0" }, [_vm._v("       Ngày hết hạn ")])
     ])
   },
   function() {
@@ -121114,7 +121333,7 @@ var render = function() {
                   _c("div", { staticClass: "card-body" }, [
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                        _vm._v("Name")
+                        _vm._v("Tên cửa hàng")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -121131,7 +121350,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-                        _vm._v("Description")
+                        _vm._v("Mô tả")
                       ]),
                       _vm._v(" "),
                       _c("textarea", {
@@ -121150,7 +121369,7 @@ var render = function() {
                       _c(
                         "label",
                         { attrs: { for: "exampleFormControlTextarea1" } },
-                        [_vm._v("Address")]
+                        [_vm._v("Địa chỉ")]
                       ),
                       _vm._v(" "),
                       _c("input", {
@@ -121167,7 +121386,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-                        _vm._v("Phone")
+                        _vm._v("SĐT")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -121218,7 +121437,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", [_vm._v("Update Profile")])
+      _c("h1", [_vm._v("Cập nhật hồ sơ cửa hàng")])
     ])
   },
   function() {
@@ -121227,7 +121446,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
-        _vm._v("From Update Profile Shop")
+        _vm._v("Bảng cập nhật hồ sơ cửa hàng")
       ])
     ])
   },
@@ -121239,7 +121458,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-        [_vm._v("Submit")]
+        [_vm._v("Cập nhật")]
       )
     ])
   }
@@ -121434,7 +121653,7 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("li", { staticClass: "breadcrumb-item active" }, [
-                _vm._v("Update Avatar")
+                _vm._v("Cập nhật")
               ])
             ])
           ])
@@ -121464,7 +121683,7 @@ var render = function() {
                   _c("div", { staticClass: "card-body" }, [
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                        _vm._v("Choose images")
+                        _vm._v("Chọn hình ảnh")
                       ]),
                       _vm._v(" "),
                       _c(
@@ -121528,7 +121747,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", [_vm._v("Update Avatar")])
+      _c("h1", [_vm._v("Cập nhật hình ảnh đại diện của cửa hàng")])
     ])
   },
   function() {
@@ -121536,7 +121755,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h3", { staticClass: "card-title" }, [_vm._v("From Create")])
+      _c("h3", { staticClass: "card-title" }, [
+        _vm._v("Bảng cập nhật ảnh đại diện")
+      ])
     ])
   },
   function() {
@@ -121547,7 +121768,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-        [_vm._v("Submit")]
+        [_vm._v("Cập nhật hình ảnh")]
       )
     ])
   }
@@ -121780,7 +122001,7 @@ var render = function() {
                   _c("div", { staticClass: "card-body" }, [
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                        _vm._v("Name Credit Card")
+                        _vm._v("Tên chủ thẻ")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -121797,7 +122018,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
                       _c("label", { attrs: { for: "exampleInputPassword1" } }, [
-                        _vm._v("Card Number")
+                        _vm._v("Số PIN")
                       ]),
                       _vm._v(" "),
                       _c("textarea", {
@@ -121816,7 +122037,7 @@ var render = function() {
                       _c(
                         "label",
                         { attrs: { for: "exampleFormControlTextarea1" } },
-                        [_vm._v("Expiry Date")]
+                        [_vm._v("Ngày hết hạn")]
                       ),
                       _vm._v(" "),
                       _c("input", {
@@ -121867,7 +122088,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", [_vm._v("Update Profile")])
+      _c("h1", [_vm._v("Cập nhật thẻ VNPAY")])
     ])
   },
   function() {
@@ -121876,7 +122097,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
-        _vm._v("From Update Credit Shop")
+        _vm._v("Bảng cập nhật thẻ VNPAY")
       ])
     ])
   },
@@ -121888,7 +122109,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-        [_vm._v("Submit")]
+        [_vm._v("Cập nhật thẻ")]
       )
     ])
   }
@@ -122253,7 +122474,7 @@ var render = function() {
                 staticClass: " col-form-label ",
                 staticStyle: { width: "100px" }
               },
-              [_vm._v("Select Year")]
+              [_vm._v("Chọn năm")]
             ),
             _vm._v(" "),
             _c(
@@ -122306,7 +122527,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Chart Bar")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [
+        _vm._v("Biểu đồ nhóm sản phẩm")
+      ])
     ])
   }
 ]
@@ -122632,7 +122855,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Account")
+                  _vm._v("Biểu đồ")
                 ])
               ])
             ])
@@ -122654,7 +122877,7 @@ var render = function() {
                 staticClass: " col-form-label ",
                 staticStyle: { width: "100px" }
               },
-              [_vm._v("Select Year")]
+              [_vm._v("Chọn năm")]
             ),
             _vm._v(" "),
             _c(
@@ -122706,7 +122929,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Account")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [
+        _vm._v("Biểu đồ doanh thu qua từng tháng")
+      ])
     ])
   }
 ]
@@ -122928,6 +123153,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 // add to component
@@ -122960,6 +123208,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     methods: {
+        showModal: function showModal() {
+            this.$refs['my-modal'].show();
+        },
+        hideModal: function hideModal() {
+            this.$refs['my-modal'].hide();
+        },
         refreshData: function refreshData() {
             var _this = this;
 
@@ -123026,224 +123280,314 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "content-wrapper" }, [
-    _c("section", { staticClass: "content" }, [
-      _c("section", { staticClass: "content-header" }, [
-        _c("div", { staticClass: "container-fluid" }, [
-          _c("div", { staticClass: "row mb-2" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-sm-6" }, [
-              _c("ol", { staticClass: "breadcrumb float-sm-right" }, [
-                _c(
-                  "li",
-                  { staticClass: "breadcrumb-item" },
-                  [
-                    _c("router-link", { attrs: { to: "/shop/order" } }, [
-                      _vm._v("Home")
-                    ])
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Order")
+  return _c("div", [
+    _c("div", { staticClass: "content-wrapper" }, [
+      _c("section", { staticClass: "content" }, [
+        _c("section", { staticClass: "content-header" }, [
+          _c("div", { staticClass: "container-fluid" }, [
+            _c("div", { staticClass: "row mb-2" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-sm-6" }, [
+                _c("ol", { staticClass: "breadcrumb float-sm-right" }, [
+                  _c(
+                    "li",
+                    { staticClass: "breadcrumb-item" },
+                    [
+                      _c("router-link", { attrs: { to: "/shop/order" } }, [
+                        _vm._v("Home")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "breadcrumb-item active" }, [
+                    _vm._v("Order")
+                  ])
                 ])
               ])
             ])
           ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { attrs: { id: "page-wrapper" } }, [
-        _c("div", { staticClass: "container-fluid" }, [
-          _c("div", { staticClass: "white-box" }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-sm-12" }, [
-                _c("div", { staticClass: "white-box" }, [
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "container-fluid" }, [
-                    _c("div", { staticClass: "row" }, [
-                      _c("div", { staticClass: "col-12" }, [
-                        _c("div", { staticClass: "card" }, [
-                          _vm._m(1),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "card-body" }, [
-                            _c(
-                              "div",
-                              { staticClass: "form-group has-search" },
-                              [
-                                _c("span", {
-                                  staticClass:
-                                    "fa fa-search form-control-feedback"
-                                }),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.searchQuery,
-                                      expression: "searchQuery"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: { type: "text" },
-                                  domProps: { value: _vm.searchQuery },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.searchQuery = $event.target.value
-                                    }
-                                  }
-                                })
-                              ]
-                            ),
+        ]),
+        _vm._v(" "),
+        _c("div", { attrs: { id: "page-wrapper" } }, [
+          _c("div", { staticClass: "container-fluid" }, [
+            _c("div", { staticClass: "white-box" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-sm-12" }, [
+                  _c("div", { staticClass: "white-box" }, [
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "container-fluid" }, [
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "col-12" }, [
+                          _c("div", { staticClass: "card" }, [
+                            _vm._m(1),
                             _vm._v(" "),
-                            _c("div", [
+                            _c("div", { staticClass: "card-body" }, [
                               _c(
-                                "table",
-                                {
-                                  staticClass:
-                                    "table table-bordered table-hover dataTable",
-                                  attrs: {
-                                    id: "example2",
-                                    role: "grid",
-                                    "aria-describedby": "example2_info"
-                                  }
-                                },
+                                "div",
+                                { staticClass: "form-group has-search" },
                                 [
-                                  _vm._m(2),
+                                  _c("span", {
+                                    staticClass:
+                                      "fa fa-search form-control-feedback"
+                                  }),
                                   _vm._v(" "),
-                                  _c(
-                                    "tbody",
-                                    _vm._l(_vm.resultQuery, function(data) {
-                                      return _c(
-                                        "tr",
-                                        {
-                                          key: data.id,
-                                          staticClass: "odd",
-                                          attrs: { role: "row" }
-                                        },
-                                        [
-                                          _c("td", [_vm._v(_vm._s(data.id))]),
-                                          _vm._v(" "),
-                                          _c(
-                                            "td",
-                                            { staticClass: "sorting_1" },
-                                            [_vm._v(_vm._s(data.name))]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "td",
-                                            { staticClass: "text-center" },
-                                            [
-                                              _c("img", {
-                                                staticClass: "rounded ",
-                                                attrs: {
-                                                  src: data.listpath.split(
-                                                    ","
-                                                  )[0],
-                                                  width: "50px",
-                                                  height: "50px",
-                                                  alt: "..."
-                                                }
-                                              })
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c("td", [
-                                            _vm._v(_vm._s(data.price))
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("td", [
-                                            _vm._v(_vm._s(data.amount))
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("td", [
-                                            _vm._v(_vm._s(data.priceship))
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("td", [
-                                            _vm._v(
-                                              _vm._s(
-                                                _vm.total(
-                                                  data.amount,
-                                                  data.price,
-                                                  data.priceship
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.searchQuery,
+                                        expression: "searchQuery"
+                                      }
+                                    ],
+                                    staticClass: "form-control",
+                                    attrs: { type: "text" },
+                                    domProps: { value: _vm.searchQuery },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.searchQuery = $event.target.value
+                                      }
+                                    }
+                                  })
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("div", [
+                                _c(
+                                  "table",
+                                  {
+                                    staticClass:
+                                      "table table-bordered table-hover dataTable",
+                                    attrs: {
+                                      id: "example2",
+                                      role: "grid",
+                                      "aria-describedby": "example2_info"
+                                    }
+                                  },
+                                  [
+                                    _vm._m(2),
+                                    _vm._v(" "),
+                                    _c(
+                                      "tbody",
+                                      _vm._l(_vm.resultQuery, function(data) {
+                                        return _c(
+                                          "tr",
+                                          {
+                                            key: data.id,
+                                            staticClass: "odd",
+                                            attrs: { role: "row" }
+                                          },
+                                          [
+                                            _c("td", [_vm._v(_vm._s(data.id))]),
+                                            _vm._v(" "),
+                                            _c(
+                                              "td",
+                                              { staticClass: "sorting_1" },
+                                              [_vm._v(_vm._s(data.name))]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "td",
+                                              { staticClass: "text-center" },
+                                              [
+                                                _c("img", {
+                                                  staticClass: "rounded ",
+                                                  attrs: {
+                                                    src: data.listpath.split(
+                                                      ","
+                                                    )[0],
+                                                    width: "50px",
+                                                    height: "50px",
+                                                    alt: "..."
+                                                  }
+                                                })
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("td", [
+                                              _vm._v(_vm._s(data.price))
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("td", [
+                                              _vm._v(_vm._s(data.amount))
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("td", [
+                                              _vm._v(_vm._s(data.priceship))
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("td", [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.total(
+                                                    data.amount,
+                                                    data.price,
+                                                    data.priceship
+                                                  )
                                                 )
                                               )
-                                            )
-                                          ]),
-                                          _vm._v(" "),
-                                          data.type == 0
-                                            ? _c("td", [_vm._v("Delivery")])
-                                            : _c("td", [_vm._v("Credit")]),
-                                          _vm._v(" "),
-                                          data.type === 0
-                                            ? _c("td", {}, [
-                                                _c(
-                                                  "button",
-                                                  {
-                                                    staticClass:
-                                                      "btn btn-danger",
-                                                    on: {
-                                                      click: function($event) {
-                                                        $event.preventDefault()
-                                                        return _vm.cancel(
-                                                          data.id
-                                                        )
+                                            ]),
+                                            _vm._v(" "),
+                                            data.type == 0
+                                              ? _c("td", [_vm._v("Vận chuyển")])
+                                              : _c("td", [_vm._v("Thẻ VNPAY")]),
+                                            _vm._v(" "),
+                                            data.type === 0
+                                              ? _c("td", {}, [
+                                                  _c(
+                                                    "button",
+                                                    {
+                                                      staticClass:
+                                                        "btn btn-danger",
+                                                      on: {
+                                                        click: function(
+                                                          $event
+                                                        ) {
+                                                          $event.preventDefault()
+                                                          return _vm.cancel(
+                                                            data.id
+                                                          )
+                                                        }
                                                       }
-                                                    }
-                                                  },
-                                                  [_vm._v("Cancel")]
-                                                )
-                                              ])
-                                            : _c("td", {}, [
-                                                _c(
-                                                  "button",
-                                                  {
-                                                    staticClass:
-                                                      "btn btn-default"
-                                                  },
-                                                  [_vm._v(" NOT Cancel")]
-                                                )
-                                              ]),
-                                          _vm._v(" "),
-                                          _c(
-                                            "td",
-                                            { staticClass: "sorting_1" },
-                                            [
+                                                    },
+                                                    [
+                                                      _c("i", {
+                                                        staticClass:
+                                                          "fas fa-trash-alt"
+                                                      })
+                                                    ]
+                                                  )
+                                                ])
+                                              : _c("td", {}, [_vm._m(3, true)]),
+                                            _vm._v(" "),
+                                            _vm._m(4, true),
+                                            _vm._v(" "),
+                                            _c("td", [
                                               _c(
-                                                "button",
+                                                "div",
                                                 {
-                                                  staticClass:
-                                                    "btn btn-success",
-                                                  on: {
-                                                    click: function($event) {
-                                                      $event.preventDefault()
-                                                      return _vm.confirm(
-                                                        data.id
-                                                      )
-                                                    }
+                                                  staticClass: "modal fade",
+                                                  attrs: {
+                                                    id: "exampleModalCenter",
+                                                    tabindex: "-1",
+                                                    role: "dialog",
+                                                    "aria-labelledby":
+                                                      "exampleModalCenterTitle",
+                                                    "aria-hidden": "true"
                                                   }
                                                 },
-                                                [_vm._v("Confirm")]
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "modal-dialog modal-dialog-centered",
+                                                      attrs: {
+                                                        role: "document"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "modal-content"
+                                                        },
+                                                        [
+                                                          _vm._m(5, true),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "modal-body"
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "\n                                                                        Đơn hàng sẽ không được hoàn trả bạn có muốn chắc đặt nó?\n                                                                    "
+                                                              )
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "modal-footer"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "button",
+                                                                {
+                                                                  staticClass:
+                                                                    "btn btn-danger",
+                                                                  attrs: {
+                                                                    type:
+                                                                      "button",
+                                                                    "data-dismiss":
+                                                                      "modal"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "Đóng!"
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "button",
+                                                                {
+                                                                  staticClass:
+                                                                    "btn btn-primary",
+                                                                  attrs: {
+                                                                    type:
+                                                                      "button",
+                                                                    "data-dismiss":
+                                                                      "modal"
+                                                                  },
+                                                                  on: {
+                                                                    click: function(
+                                                                      $event
+                                                                    ) {
+                                                                      $event.preventDefault()
+                                                                      return _vm.confirm(
+                                                                        data.id
+                                                                      )
+                                                                    }
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "Đặt hàng"
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
                                               )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    }),
-                                    0
-                                  )
-                                ]
-                              )
+                                            ])
+                                          ]
+                                        )
+                                      }),
+                                      0
+                                    )
+                                  ]
+                                )
+                              ])
                             ])
                           ])
                         ])
@@ -123265,7 +123609,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("List Order")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("Danh sách đơn hàng")])
     ])
   },
   function() {
@@ -123275,7 +123619,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
         _vm._v(
-          "\n                                                        DataTable All order products\n                                                    "
+          "\n                                                            Dữ liệu danh sách đơn hàng\n                                                        "
         )
       ])
     ])
@@ -123315,7 +123659,7 @@ var staticRenderFns = [
               "aria-sort": "descending"
             }
           },
-          [_vm._v("Name")]
+          [_vm._v("Tên")]
         ),
         _vm._v(" "),
         _c(
@@ -123330,7 +123674,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Image")]
+          [_vm._v("Hình")]
         ),
         _vm._v(" "),
         _c(
@@ -123345,7 +123689,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Price")]
+          [_vm._v("Giá")]
         ),
         _vm._v(" "),
         _c(
@@ -123360,7 +123704,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Amount")]
+          [_vm._v("Số lượng")]
         ),
         _vm._v(" "),
         _c(
@@ -123375,7 +123719,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Delivery price")]
+          [_vm._v("Giá vận chuyển")]
         ),
         _vm._v(" "),
         _c(
@@ -123390,7 +123734,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Total price")]
+          [_vm._v("Tổng tiền")]
         ),
         _vm._v(" "),
         _c(
@@ -123405,7 +123749,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Payment")]
+          [_vm._v("Thanh toán")]
         ),
         _vm._v(" "),
         _c(
@@ -123420,7 +123764,7 @@ var staticRenderFns = [
               "aria-label": "CSS grade: activate to sort column ascending"
             }
           },
-          [_vm._v("Cancel")]
+          [_vm._v("Hủy")]
         ),
         _vm._v(" "),
         _c(
@@ -123435,9 +123779,61 @@ var staticRenderFns = [
               "aria-label": "CSS grade: activate to sort column ascending"
             }
           },
-          [_vm._v("Confirm")]
+          [_vm._v("Xác nhận")]
         )
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("button", { staticClass: "btn btn-default" }, [
+      _c("i", { staticClass: "fas fa-trash-alt" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "sorting_1" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary",
+          attrs: {
+            type: "button",
+            "data-toggle": "modal",
+            "data-target": "#exampleModalCenter"
+          }
+        },
+        [_c("i", { staticClass: "fas fa-check" })]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        { staticClass: "modal-title", attrs: { id: "exampleModalLongTitle" } },
+        [_vm._v("Xác nhận đơn hàng?")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
     ])
   }
 ]
@@ -123877,8 +124273,8 @@ var render = function() {
                                           ]),
                                           _vm._v(" "),
                                           data.type == 0
-                                            ? _c("td", [_vm._v("Delivery")])
-                                            : _c("td", [_vm._v("Credit")])
+                                            ? _c("td", [_vm._v("Vận chuyển")])
+                                            : _c("td", [_vm._v("Thẻ VNPAY")])
                                         ]
                                       )
                                     }),
@@ -123907,7 +124303,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("List Canceled")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [
+        _vm._v("Danh sách đơn hàng đã hủy")
+      ])
     ])
   },
   function() {
@@ -123917,7 +124315,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
         _vm._v(
-          "\n                                                        DataTable All order canceled products\n                                                    "
+          "\n                                                        Dữ liệu danh sách đơn hàng đã hủy\n                                                    "
         )
       ])
     ])
@@ -123957,7 +124355,7 @@ var staticRenderFns = [
               "aria-sort": "descending"
             }
           },
-          [_vm._v("Name")]
+          [_vm._v("Tên")]
         ),
         _vm._v(" "),
         _c(
@@ -123972,7 +124370,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Image")]
+          [_vm._v("Hình")]
         ),
         _vm._v(" "),
         _c(
@@ -123987,7 +124385,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Price")]
+          [_vm._v("Giá")]
         ),
         _vm._v(" "),
         _c(
@@ -124002,7 +124400,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Amount")]
+          [_vm._v("Số lượng")]
         ),
         _vm._v(" "),
         _c(
@@ -124017,7 +124415,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("delivery price")]
+          [_vm._v("Giá vận chuyển")]
         ),
         _vm._v(" "),
         _c(
@@ -124032,7 +124430,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Total price")]
+          [_vm._v("Tỏng tiền")]
         ),
         _vm._v(" "),
         _c(
@@ -124047,7 +124445,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Payment")]
+          [_vm._v("Thanh toán")]
         )
       ])
     ])
@@ -124266,6 +124664,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 // add to component
@@ -124354,7 +124761,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("li", { staticClass: "breadcrumb-item active" }, [
-                  _vm._v("Canceled")
+                  _vm._v("xác nhận")
                 ])
               ])
             ])
@@ -124489,8 +124896,10 @@ var render = function() {
                                           ]),
                                           _vm._v(" "),
                                           data.type == 0
-                                            ? _c("td", [_vm._v("Delivery")])
-                                            : _c("td", [_vm._v("Credit")])
+                                            ? _c("td", [_vm._v("Vận chuyển")])
+                                            : _c("td", [_vm._v("Thẻ VNPAY")]),
+                                          _vm._v(" "),
+                                          _vm._m(3, true)
                                         ]
                                       )
                                     }),
@@ -124519,7 +124928,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-6" }, [
-      _c("h1", { staticClass: "m-0 text-dark" }, [_vm._v("List Canceled")])
+      _c("h1", { staticClass: "m-0 text-dark" }, [
+        _vm._v("Danh sách đơn hàng xác nhận")
+      ])
     ])
   },
   function() {
@@ -124529,7 +124940,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-header" }, [
       _c("h3", { staticClass: "card-title" }, [
         _vm._v(
-          "\n                                                        DataTable All order canceled products\n                                                    "
+          "\n                                                        Dữ liệu danh sách đơn hàng xác nhận\n                                                    "
         )
       ])
     ])
@@ -124569,7 +124980,7 @@ var staticRenderFns = [
               "aria-sort": "descending"
             }
           },
-          [_vm._v("Name")]
+          [_vm._v("Tên")]
         ),
         _vm._v(" "),
         _c(
@@ -124584,7 +124995,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Image")]
+          [_vm._v("Hình")]
         ),
         _vm._v(" "),
         _c(
@@ -124599,7 +125010,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Price")]
+          [_vm._v("Giá")]
         ),
         _vm._v(" "),
         _c(
@@ -124614,7 +125025,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Amount")]
+          [_vm._v("Số lượng")]
         ),
         _vm._v(" "),
         _c(
@@ -124629,7 +125040,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("delivery price")]
+          [_vm._v("Giá vận chuyển")]
         ),
         _vm._v(" "),
         _c(
@@ -124644,7 +125055,7 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Total price")]
+          [_vm._v("Tổng tiền")]
         ),
         _vm._v(" "),
         _c(
@@ -124659,9 +125070,44 @@ var staticRenderFns = [
               "aria-label": "Platform(s): activate to sort column ascending"
             }
           },
-          [_vm._v("Payment")]
+          [_vm._v("Thanh toán ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass: "sorting",
+            attrs: {
+              tabindex: "0",
+              "aria-controls": "example2",
+              rowspan: "1",
+              colspan: "1",
+              "aria-label": "Platform(s): activate to sort column ascending"
+            }
+          },
+          [_vm._v("Trạng thái")]
         )
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c(
+        "select",
+        { staticClass: "form-control select2", staticStyle: { width: "100%" } },
+        [
+          _c("option", [_vm._v("Đã thanh toán")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("Đang xử lý")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("Đang giao")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("Giao thành công")])
+        ]
+      )
     ])
   }
 ]
@@ -128274,7 +128720,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("Logout")]
+            [_vm._v("Đăng Xuất")]
           )
         ])
       ]),
@@ -129372,9 +129818,9 @@ var render = function() {
                             attrs: { to: "/home" }
                           },
                           [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
+                            _c("i", { staticClass: "fas fa-user" }),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Account")])
+                            _c("p", [_vm._v("Tài khoản")])
                           ]
                         )
                       ],
@@ -129402,9 +129848,9 @@ var render = function() {
                             attrs: { to: "/confirmation" }
                           },
                           [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
+                            _c("i", { staticClass: "fas fa-eye" }),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Confirmation Account")])
+                            _c("p", [_vm._v("Thông tin tài khoản")])
                           ]
                         )
                       ],
@@ -129430,9 +129876,9 @@ var render = function() {
                             attrs: { to: "/block" }
                           },
                           [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
+                            _c("i", { staticClass: "fas fa-lock" }),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Block Account")])
+                            _c("p", [_vm._v("Chặn tài khoản")])
                           ]
                         )
                       ],
@@ -129458,9 +129904,9 @@ var render = function() {
                             attrs: { to: "/unblock" }
                           },
                           [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
+                            _c("i", { staticClass: "fas fa-lock-open" }),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Unblock Account")])
+                            _c("p", [_vm._v("Bỏ chặn tài khoản")])
                           ]
                         )
                       ],
@@ -129501,7 +129947,7 @@ var render = function() {
                       _c("i", { staticClass: "nav-icon fas fa-list" }),
                       _vm._v(" "),
                       _c("p", [
-                        _vm._v("\n              Order\n              "),
+                        _vm._v("\n              Đơn hàng\n              "),
                         _c("i", { staticClass: "right fas fa-angle-left" })
                       ])
                     ]
@@ -129527,9 +129973,9 @@ var render = function() {
                             attrs: { to: "/home/order" }
                           },
                           [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
+                            _c("i", { staticClass: "fas fa-archive" }),
                             _vm._v(" "),
-                            _c("p", [_vm._v("List Order")])
+                            _c("p", [_vm._v("Danh sách đơn hàng")])
                           ]
                         )
                       ],
@@ -129559,9 +130005,9 @@ var render = function() {
                             attrs: { to: "/home/order/approved" }
                           },
                           [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
+                            _c("i", { staticClass: "fas fa-file" }),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Order approved")])
+                            _c("p", [_vm._v("Đơn hàng được chấp nhận")])
                           ]
                         )
                       ],
@@ -129591,9 +130037,9 @@ var render = function() {
                             attrs: { to: "/home/order/canceled" }
                           },
                           [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
+                            _c("i", { staticClass: "fas fa-trash-alt" }),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Order is canceled")])
+                            _c("p", [_vm._v("Đơn hàng bị hủy")])
                           ]
                         )
                       ],
@@ -129626,11 +130072,11 @@ var render = function() {
                       _c("i", { staticClass: "nav-icon fab fa-product-hunt" }),
                       _vm._v(" "),
                       _c("p", [
-                        _vm._v("\n              Product\n              "),
+                        _vm._v("\n              Sản phẩm\n              "),
                         _c(
                           "span",
                           { staticClass: "right badge badge-primary" },
-                          [_vm._v("List")]
+                          [_vm._v("Danh sách")]
                         )
                       ])
                     ]
@@ -129661,11 +130107,11 @@ var render = function() {
                       _c("i", { staticClass: "nav-icon fas fa-comment" }),
                       _vm._v(" "),
                       _c("p", [
-                        _vm._v("\n              Comments\n              "),
+                        _vm._v("\n              Bình luận\n              "),
                         _c(
                           "span",
                           { staticClass: "right badge badge-primary" },
-                          [_vm._v("Shop")]
+                          [_vm._v("Cửa hàng")]
                         )
                       ])
                     ]
@@ -129697,12 +130143,12 @@ var render = function() {
                       _vm._v(" "),
                       _c("p", [
                         _vm._v(
-                          "\n              Add Group Product\n              "
+                          "\n              Thêm nhóm sản phẩm\n              "
                         ),
                         _c(
                           "span",
                           { staticClass: "right badge badge-primary" },
-                          [_vm._v("Add")]
+                          [_vm._v("Thêm")]
                         )
                       ])
                     ]
@@ -129733,11 +130179,11 @@ var render = function() {
                       _c("i", { staticClass: "nav-icon fas fa-chart-bar" }),
                       _vm._v(" "),
                       _c("p", [
-                        _vm._v("\n              Chart Bar\n              "),
+                        _vm._v("\n              Biểu đồ\n              "),
                         _c(
                           "span",
                           { staticClass: "right badge badge-primary" },
-                          [_vm._v("group")]
+                          [_vm._v("Nhóm")]
                         )
                       ])
                     ]
@@ -129768,11 +130214,11 @@ var render = function() {
                       _c("i", { staticClass: "nav-icon fas fa-chart-bar" }),
                       _vm._v(" "),
                       _c("p", [
-                        _vm._v("\n              Chart Bar\n              "),
+                        _vm._v("\n              Biểu đồ\n              "),
                         _c(
                           "span",
                           { staticClass: "right badge badge-primary" },
-                          [_vm._v("Total")]
+                          [_vm._v("Tổng")]
                         )
                       ])
                     ]
@@ -129803,11 +130249,11 @@ var render = function() {
                       _c("i", { staticClass: "nav-icon fas fa-chart-line" }),
                       _vm._v(" "),
                       _c("p", [
-                        _vm._v("\n              Chart Line\n              "),
+                        _vm._v("\n              Biểu đồ đường\n              "),
                         _c(
                           "span",
                           { staticClass: "right badge badge-primary" },
-                          [_vm._v("Total")]
+                          [_vm._v("Tổng")]
                         )
                       ])
                     ]
@@ -129892,7 +130338,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "info" }, [
         _c("a", { staticClass: "d-block", attrs: { href: "#" } }, [
-          _vm._v("Welcome Admin")
+          _vm._v("Xin chào Admin")
         ])
       ])
     ])
@@ -131005,7 +131451,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "AppFooter"
@@ -131028,16 +131473,24 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("footer", { staticClass: "main-footer" }, [
       _c("div", { staticClass: "pull-right hidden-xs" }, [
-        _c("b", [_vm._v("Version")]),
-        _vm._v(" 2.4.0\n  ")
+        _c("b", [_vm._v("Văn Quá")]),
+        _vm._v(" B1704632\n  ")
       ]),
       _vm._v(" "),
       _c("strong", [
-        _vm._v("Copyright © 2021-2022 "),
-        _c("a", { attrs: { href: "https://adminlte.io" } }, [_vm._v("MTV")]),
+        _vm._v("Thư mục chứa các ảnh của sản phẩm "),
+        _c(
+          "a",
+          {
+            attrs: {
+              href:
+                "https://drive.google.com/drive/u/0/folders/1ncKoZC9ElMbU-Bwuag5ROBFZL6LJjecj/"
+            }
+          },
+          [_vm._v("Nông Sản Việt")]
+        ),
         _vm._v(".")
-      ]),
-      _vm._v(" All rights\n  reserved.\n")
+      ])
     ])
   }
 ]
@@ -131103,6 +131556,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -131877,9 +132331,9 @@ var render = function() {
                             attrs: { to: "/shop/home" }
                           },
                           [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
+                            _c("i", { staticClass: "fas fa-archive" }),
                             _vm._v(" "),
-                            _c("p", [_vm._v("List Product")])
+                            _c("p", [_vm._v("Danh sách sản phẩm")])
                           ]
                         )
                       ],
@@ -131909,9 +132363,137 @@ var render = function() {
                             attrs: { to: "/shop/home/transportfee" }
                           },
                           [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
+                            _c("i", { staticClass: "fas fa-bicycle" }),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Transport Fee")])
+                            _c("p", [_vm._v("Phí vận chuyển")])
+                          ]
+                        )
+                      ],
+                      1
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                {
+                  staticClass: "nav-item has-treeview menu-open",
+                  attrs: { id: "select-vue" },
+                  on: {
+                    click: function($event) {
+                      return _vm.itemActive(_vm.$route.path)
+                    }
+                  }
+                },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      class: [
+                        _vm.itemA == "/shop/order" ||
+                        _vm.itemA == "/shop/cancel" ||
+                        _vm.itemA == "/shop/confirm"
+                          ? "active"
+                          : ""
+                      ],
+                      attrs: { to: "/shop/order" }
+                    },
+                    [
+                      _c("i", { staticClass: "fas fa-shopping-cart" }),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v("\n              Đơn hàng\n              "),
+                        _c("i", { staticClass: "right fas fa-angle-left" })
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("ul", { staticClass: "nav nav-treeview" }, [
+                    _c(
+                      "li",
+                      {
+                        staticClass: "nav-item",
+                        on: {
+                          click: function($event) {
+                            return _vm.itemActive(_vm.$route.path)
+                          }
+                        }
+                      },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link",
+                            class: [_vm.itemA == "/shop/order" ? "active" : ""],
+                            attrs: { to: "/shop/order" }
+                          },
+                          [
+                            _c("i", { staticClass: "nav-icon fas fa-list" }),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Danh sách đơn hàng")])
+                          ]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "nav-item",
+                        on: {
+                          click: function($event) {
+                            return _vm.itemActive(_vm.$route.path)
+                          }
+                        }
+                      },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link",
+                            class: [
+                              _vm.itemA == "/shop/cancel" ? "active" : ""
+                            ],
+                            attrs: { to: "/shop/cancel" }
+                          },
+                          [
+                            _c("i", { staticClass: "fas fa-file" }),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Danh sách hủy đơn hàng")])
+                          ]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "nav-item",
+                        on: {
+                          click: function($event) {
+                            return _vm.itemActive(_vm.$route.path)
+                          }
+                        }
+                      },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link",
+                            class: [
+                              _vm.itemA == "/shop/confirm" ? "active" : ""
+                            ],
+                            attrs: { to: "/shop/confirm" }
+                          },
+                          [
+                            _c("i", { staticClass: "fas fa-file" }),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Danh sách đơn hàng xác nhận")])
                           ]
                         )
                       ],
@@ -131952,7 +132534,7 @@ var render = function() {
                       _c("i", { staticClass: "nav-icon fas fa-user" }),
                       _vm._v(" "),
                       _c("p", [
-                        _vm._v("\n              Account\n              "),
+                        _vm._v("\n             Tài khoản\n              "),
                         _c("i", { staticClass: "right fas fa-angle-left" })
                       ])
                     ]
@@ -131980,9 +132562,9 @@ var render = function() {
                             attrs: { to: "/shop/account" }
                           },
                           [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
+                            _c("i", { staticClass: "far fa-id-badge" }),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Profile")])
+                            _c("p", [_vm._v("Hồ sơ")])
                           ]
                         )
                       ],
@@ -132010,9 +132592,9 @@ var render = function() {
                             attrs: { to: "/shop/updateaccount" }
                           },
                           [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
+                            _c("i", { staticClass: "fas fa-address-book" }),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Update Profile")])
+                            _c("p", [_vm._v("Cập nhật hồ sơ")])
                           ]
                         )
                       ],
@@ -132040,9 +132622,9 @@ var render = function() {
                             attrs: { to: "/shop/updatecredit" }
                           },
                           [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
+                            _c("i", { staticClass: "fab fa-cc-visa" }),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Update Credit")])
+                            _c("p", [_vm._v("Cập nhật thẻ")])
                           ]
                         )
                       ],
@@ -132070,137 +132652,9 @@ var render = function() {
                             attrs: { to: "/shop/updateavatar" }
                           },
                           [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
+                            _c("i", { staticClass: "fas fa-camera-retro" }),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Update Avatar")])
-                          ]
-                        )
-                      ],
-                      1
-                    )
-                  ])
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                {
-                  staticClass: "nav-item has-treeview menu-open",
-                  attrs: { id: "select-vue" },
-                  on: {
-                    click: function($event) {
-                      return _vm.itemActive(_vm.$route.path)
-                    }
-                  }
-                },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      class: [
-                        _vm.itemA == "/shop/order" ||
-                        _vm.itemA == "/shop/cancel" ||
-                        _vm.itemA == "/shop/confirm"
-                          ? "active"
-                          : ""
-                      ],
-                      attrs: { to: "/shop/order" }
-                    },
-                    [
-                      _c("i", { staticClass: "nav-icon fas fa-list" }),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v("\n              Order\n              "),
-                        _c("i", { staticClass: "right fas fa-angle-left" })
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("ul", { staticClass: "nav nav-treeview" }, [
-                    _c(
-                      "li",
-                      {
-                        staticClass: "nav-item",
-                        on: {
-                          click: function($event) {
-                            return _vm.itemActive(_vm.$route.path)
-                          }
-                        }
-                      },
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "nav-link",
-                            class: [_vm.itemA == "/shop/order" ? "active" : ""],
-                            attrs: { to: "/shop/order" }
-                          },
-                          [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("List Order")])
-                          ]
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "li",
-                      {
-                        staticClass: "nav-item",
-                        on: {
-                          click: function($event) {
-                            return _vm.itemActive(_vm.$route.path)
-                          }
-                        }
-                      },
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "nav-link",
-                            class: [
-                              _vm.itemA == "/shop/cancel" ? "active" : ""
-                            ],
-                            attrs: { to: "/shop/cancel" }
-                          },
-                          [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("Order list canceled")])
-                          ]
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "li",
-                      {
-                        staticClass: "nav-item",
-                        on: {
-                          click: function($event) {
-                            return _vm.itemActive(_vm.$route.path)
-                          }
-                        }
-                      },
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "nav-link",
-                            class: [
-                              _vm.itemA == "/shop/confirm" ? "active" : ""
-                            ],
-                            attrs: { to: "/shop/confirm" }
-                          },
-                          [
-                            _c("i", { staticClass: "far fa-circle nav-icon" }),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("Order list confirm")])
+                            _c("p", [_vm._v("Cập nhật hình ảnh")])
                           ]
                         )
                       ],
@@ -132235,11 +132689,11 @@ var render = function() {
                       _c("i", { staticClass: "nav-icon fas fa-chart-bar" }),
                       _vm._v(" "),
                       _c("p", [
-                        _vm._v("\n              Chart Bar\n              "),
+                        _vm._v("\n              Biểu đồ\n              "),
                         _c(
                           "span",
                           { staticClass: "right badge badge-primary" },
-                          [_vm._v("group")]
+                          [_vm._v("Nhóm")]
                         )
                       ])
                     ]
@@ -132272,11 +132726,11 @@ var render = function() {
                       _c("i", { staticClass: "nav-icon fas fa-chart-line" }),
                       _vm._v(" "),
                       _c("p", [
-                        _vm._v("\n              Chart Line\n              "),
+                        _vm._v("\n              Biểu đồ\n              "),
                         _c(
                           "span",
                           { staticClass: "right badge badge-primary" },
-                          [_vm._v("Total")]
+                          [_vm._v("Tổng")]
                         )
                       ])
                     ]
@@ -132344,7 +132798,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("a", { staticClass: "brand-link", attrs: { href: "#" } }, [
       _c("span", { staticClass: "brand-text font-weight-light" }, [
-        _vm._v("DASHBOARD SHOP")
+        _vm._v("DASHBOARD Cửa hàng")
       ])
     ])
   },
@@ -132354,7 +132808,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "info" }, [
       _c("a", { staticClass: "d-block", attrs: { href: "#" } }, [
-        _vm._v("Welcome Shop")
+        _vm._v("Chào mừng cửa hàng")
       ])
     ])
   },

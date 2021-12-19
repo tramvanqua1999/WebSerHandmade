@@ -5,7 +5,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">List Order</h1>
+                            <h1 class="m-0 text-dark">Danh sách đơn hàng bị hủy</h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
@@ -36,7 +36,7 @@
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h3 class="card-title">
-                                                            DataTable All order is canceled
+                                                            Dữ liệu đơn hàng bị hủy
                                                         </h3>
                                                     </div>
                                                     <!-- /.card-header -->
@@ -49,13 +49,13 @@
                                                         <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
                                                         <thead>
                                                             <tr role="row"><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending">id</th>
-                                                            <th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" aria-sort="descending">Name</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Image</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Price</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Amount</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Delivery price</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Total price</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Payment</th>
+                                                            <th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" aria-sort="descending">Tên</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Hình</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Giá</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Số lượng</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Giá vận chuyển</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Tổng giá</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Thanh toán</th>
                                                            </tr>
                                                         </thead>
                                                         <tbody>
@@ -67,8 +67,8 @@
                                                          <td>{{data.amount}}</td>
                                                         <td>{{data.priceship}}</td>
                                                         <td>{{total(data.amount,data.price,data.priceship)}}</td>
-                                                        <td v-if="data.type == 0">Delivery</td>
-                                                        <td v-else>Credit</td>
+                                                        <td v-if="data.type == 0">Vận chuyển</td>
+                                                        <td v-else>Thẻ VNPAY</td>
                                                         </tr>
                                                         </tbody>
                                                     </table>

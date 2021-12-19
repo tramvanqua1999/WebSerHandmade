@@ -5,7 +5,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">List Product</h1>
+                            <h1 class="m-0 text-dark">Danh sách bình luận</h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
@@ -13,7 +13,7 @@
                                 <li class="breadcrumb-item">
                                     <router-link to="/home/listproduct">Home</router-link>
                                 </li>
-                                <li class="breadcrumb-item active">Product</li>
+                                <li class="breadcrumb-item active">Bình luận</li>
                             </ol>
                         </div>
                         <!-- /.col -->
@@ -34,7 +34,7 @@
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h3 class="card-title">
-                                                            DataTable All shop products
+                                                            Dữ liệu bình luận.
                                                         </h3>
                                                     </div>
                                                     <!-- /.card-header -->
@@ -47,12 +47,12 @@
                                                         <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
                                                         <thead>
                                                             <tr role="row"><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending">id</th>
-                                                            <th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" aria-sort="descending">Name Shop</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Name Customer</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Content</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Rating</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Create</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Delete</th></tr>
+                                                            <th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" aria-sort="descending">Tên cửa hàng</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Tên khách hàng</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Nội dung</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Số sao</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Ngày tạo</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Xóa</th></tr>
                                                         </thead>
                                                         <tbody>
                                                         <tr v-for="data in  resultQuery" role="row" class="odd" :key="data.id">
@@ -62,7 +62,7 @@
                                                         <td>{{data.content}}</td>
                                                         <td>{{data.rating}} <i style="color: orange; font-size: 15px; line-height: 10px;" class="fas fa-star"></i></td>
                                                         <td>{{data.create}}</td>
-                                                        <td class=""><button class="btn btn-danger" @click.prevent="deletePost(data.id)">Delete</button></td>
+                                                        <td class=""><button class="btn btn-danger" @click.prevent="deletePost(data.id)"><i class="fas fa-trash-alt"></i></button></td>
                                                         </tr>
                                                         </tbody>
                                                     </table>

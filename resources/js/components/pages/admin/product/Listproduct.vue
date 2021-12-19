@@ -5,7 +5,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">List Product</h1>
+                            <h1 class="m-0 text-dark">Danh sách sản phẩm</h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
@@ -13,7 +13,7 @@
                                 <li class="breadcrumb-item">
                                     <router-link to="/home/listproduct">Home</router-link>
                                 </li>
-                                <li class="breadcrumb-item active">Product</li>
+                                <li class="breadcrumb-item active">sản phẩm</li>
                             </ol>
                         </div>
                         <!-- /.col -->
@@ -34,7 +34,7 @@
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h3 class="card-title">
-                                                            DataTable All shop products
+                                                            Dữ liệu danh sách sản phẩm
                                                         </h3>
                                                     </div>
                                                     <!-- /.card-header -->
@@ -47,14 +47,14 @@
                                                         <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
                                                         <thead>
                                                             <tr role="row"><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending">id</th>
-                                                            <th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" aria-sort="descending">Name</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Image</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Price</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Amount</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Discount</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Lastday</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Information</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Delete</th></tr>
+                                                            <th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" aria-sort="descending">Tên</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Hình</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Giá</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Số lượng</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Giảm giá</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Ngày kết thúc</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Xem</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Xóa</th></tr>
                                                         </thead>
                                                         <tbody>
                                                         <tr v-for="data in  resultQuery" role="row" class="odd" :key="data.id">
@@ -65,8 +65,9 @@
                                                         <td>{{data.amount}}</td>
                                                         <td>{{data.discount}}%</td>
                                                         <td>{{data.lastday}}</td>
-                                                        <td class="sorting_1"><button class="btn btn-success"  @click.prevent="detail(data.id)">Detail</button></td>
-                                                        <td class=""><button class="btn btn-danger" @click.prevent="deletePost(data.id)">Delete</button></td>
+                                                       
+                                                        <td class="sorting_1"><button class="btn btn-success"  @click.prevent="detail(data.id)"><i class="fas fa-eye"></i></button></td>
+                                                        <td class=""><button class="btn btn-danger" @click.prevent="deletePost(data.id)"><i class="fas fa-trash-alt"></i></button></td>
                                                         </tr>
                                                         </tbody>
                                                     </table>

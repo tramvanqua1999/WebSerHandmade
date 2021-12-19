@@ -9,7 +9,7 @@
           <router-link to="/" class="nav-link">Home</router-link>
       </li> -->
       <li class="nav-item d-none d-sm-inline-block">
-       <a class="nav-link" href="#" @click.prevent="logout()">Logout</a>
+       <a class="nav-link" href="#" @click.prevent="logout()">Đăng Xuất</a>
       </li>
     </ul>
 

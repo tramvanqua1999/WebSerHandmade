@@ -15,7 +15,7 @@
           <!-- <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image"> -->
         </div>
         <div class="info">
-          <a href="#" class="d-block">Welcome Admin</a>
+          <a href="#" class="d-block">Xin chào Admin</a>
         </div>
       </div>
       <!-- Sidebar Menu -->
@@ -34,26 +34,26 @@
             <ul class="nav nav-treeview">
               <li class="nav-item" @click="itemActive($route.path)">
                 <router-link to="/home" class="nav-link" :class="[(itemA == '/home') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Account</p>
+                  <i class="fas fa-user"></i>
+                  <p>Tài khoản</p>
                 </router-link>
               </li>
               <li class="nav-item" @click="itemActive($route.path)">
                 <router-link to="/confirmation" class="nav-link" :class="[(itemA == '/confirmation') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Confirmation Account</p>
+                  <i class="fas fa-eye"></i>
+                  <p>Thông tin tài khoản</p>
                 </router-link>
               </li>
               <li class="nav-item" @click="itemActive($route.path)">
                 <router-link to="/block" class="nav-link" :class="[(itemA == '/block') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Block Account</p>
+                  <i class="fas fa-lock"></i>
+                  <p>Chặn tài khoản</p>
                 </router-link>
               </li>
               <li class="nav-item" @click="itemActive($route.path)">
                 <router-link to="/unblock" class="nav-link" :class="[(itemA == '/unblock') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Unblock Account</p>
+                 <i class="fas fa-lock-open"></i>
+                  <p>Bỏ chặn tài khoản</p>
                 </router-link>
               </li>
               <!-- <li class="nav-item">
@@ -69,27 +69,27 @@
             <router-link to="/home/order" class="nav-link" :class="[(itemA == '/home/order' || itemA == '/home/detail'  || itemA == '/home/order/approved' || itemA == '/home/order/canceled') ? 'active':'']">
               <i class="nav-icon fas fa-list"></i>
               <p>
-                Order
+                Đơn hàng
                 <i class="right fas fa-angle-left"></i>
               </p>
            </router-link>
             <ul class="nav nav-treeview">
               <li class="nav-item" @click="itemActive($route.path)">
                 <router-link to="/home/order" class="nav-link" :class="[(itemA == '/home/order') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List Order</p>
+                  <i class="fas fa-archive"></i>
+                  <p>Danh sách đơn hàng</p>
                 </router-link>
               </li>
               <li class="nav-item" @click="itemActive($route.path)">
                 <router-link to="/home/order/approved" class="nav-link" :class="[(itemA == '/home/order/approved') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Order approved</p>
+                  <i class="fas fa-file"></i>
+                  <p>Đơn hàng được chấp nhận</p>
                 </router-link>
               </li>
               <li class="nav-item" @click="itemActive($route.path)">
                 <router-link to="/home/order/canceled" class="nav-link" :class="[(itemA == '/home/order/canceled') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Order is canceled</p>
+                  <i class="fas fa-trash-alt"></i>
+                  <p>Đơn hàng bị hủy</p>
                 </router-link>
               </li>
             </ul>
@@ -99,8 +99,8 @@
            <router-link to="/home/listproduct" class="nav-link" :class="[(itemA == '/home/listproduct') ? 'active':'']">
               <i class="nav-icon fab fa-product-hunt"></i>
               <p>
-                Product
-                <span class="right badge badge-primary">List</span>
+                Sản phẩm
+                <span class="right badge badge-primary">Danh sách</span>
               </p>
              </router-link>
           </li>
@@ -109,8 +109,8 @@
            <router-link to="/home/comments" class="nav-link" :class="[(itemA == '/home/comments') ? 'active':'']">
               <i class="nav-icon fas fa-comment"></i>
               <p>
-                Comments
-                <span class="right badge badge-primary">Shop</span>
+                Bình luận
+                <span class="right badge badge-primary">Cửa hàng</span>
               </p>
              </router-link>
           </li>
@@ -119,8 +119,8 @@
            <router-link to="/addgroup" class="nav-link" :class="[(itemA == '/addgroup') ? 'active':'']">
               <i class="nav-icon fas fa-layer-group"></i>
               <p>
-                Add Group Product
-                <span class="right badge badge-primary">Add</span>
+                Thêm nhóm sản phẩm
+                <span class="right badge badge-primary">Thêm</span>
               </p>
              </router-link>
           </li>
@@ -129,8 +129,8 @@
            <router-link to="/chart/group/bar" class="nav-link" :class="[(itemA == '/chart/group/bar') ? 'active':'']">
               <i class="nav-icon fas fa-chart-bar"></i>
               <p>
-                Chart Bar
-                <span class="right badge badge-primary">group</span>
+                Biểu đồ
+                <span class="right badge badge-primary">Nhóm</span>
               </p>
              </router-link>
           </li>
@@ -138,8 +138,8 @@
            <router-link to="/chart/total/bar" class="nav-link" :class="[(itemA == '/chart/total/bar') ? 'active':'']">
               <i class="nav-icon fas fa-chart-bar"></i>
               <p>
-                Chart Bar
-                <span class="right badge badge-primary">Total</span>
+                Biểu đồ
+                <span class="right badge badge-primary">Tổng</span>
               </p>
              </router-link>
           </li>
@@ -147,8 +147,8 @@
            <router-link to="/chart/total/line" class="nav-link" :class="[(itemA == '/chart/total/line') ? 'active':'']">
               <i class="nav-icon fas fa-chart-line"></i>
               <p>
-                Chart Line
-                <span class="right badge badge-primary">Total</span>
+                Biểu đồ đường
+                <span class="right badge badge-primary">Tổng</span>
               </p>
              </router-link>
           </li>

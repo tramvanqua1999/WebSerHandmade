@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
      
-      <span class="brand-text font-weight-light">DASHBOARD SHOP</span>
+      <span class="brand-text font-weight-light">DASHBOARD Cửa hàng</span>
     </a>
 
     <!-- Sidebar -->
@@ -15,7 +15,7 @@
           <img v-else src="https://drive.google.com/uc?export=view&id=1lzuEPnRmKfY6b3LztswmwODn65FNyN-B" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Welcome Shop</a>
+          <a href="#" class="d-block">Chào mừng cửa hàng</a>
         </div>
       </div>
 
@@ -35,14 +35,14 @@
             <ul class="nav nav-treeview">
               <li class="nav-item" @click="itemActive($route.path)">
                 <router-link to="/shop/home" class="nav-link" :class="[(itemA == '/shop/home') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List Product</p>
+                  <i class="fas fa-archive"></i>
+                  <p>Danh sách sản phẩm</p>
                 </router-link>
               </li>
               <li class="nav-item" @click="itemActive($route.path)">
                 <router-link to="/shop/home/transportfee" class="nav-link" :class="[(itemA == '/shop/home/transportfee') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Transport Fee</p>
+                  <i class="fas fa-bicycle"></i>
+                  <p>Phí vận chuyển</p>
                 </router-link>
               </li>
               <!-- <li class="nav-item">
@@ -53,71 +53,72 @@
               </li> -->
             </ul>
           </li>
-          <!-- -------------------------------ACCOUNT------------------- -->
-          <li class="nav-item has-treeview menu-open" @click="itemActive($route.path)" id="select-vue">
-            <router-link to="/shop/account" class="nav-link" :class="[(itemA == '/shop/account' || itemA == '/shop/updateaccount' || itemA == '/shop/updateavatar' || itemA == '/shop/updatecredit') ? 'active':'']">
-              <i class="nav-icon fas fa-user"></i>
-              <p>
-                Account
-                <i class="right fas fa-angle-left"></i>
-              </p>
-           </router-link>
-            <ul class="nav nav-treeview">
-              <li class="nav-item" @click="itemActive($route.path)">
-                <router-link to="/shop/account" class="nav-link" :class="[(itemA == '/shop/account') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Profile</p>
-                </router-link>
-              </li>
-              <li class="nav-item" @click="itemActive($route.path)">
-                <router-link to="/shop/updateaccount" class="nav-link" :class="[(itemA == '/shop/updateaccount') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Update Profile</p>
-                </router-link>
-              </li>
-               <li class="nav-item" @click="itemActive($route.path)">
-                <router-link to="/shop/updatecredit" class="nav-link" :class="[(itemA == '/shop/updatecredit') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Update Credit</p>
-                </router-link>
-              </li>
-              <li class="nav-item" @click="itemActive($route.path)">
-                <router-link to="/shop/updateavatar" class="nav-link" :class="[(itemA == '/shop/updateavatar') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Update Avatar</p>
-                </router-link>
-              </li>
-            </ul>
-          </li>
           <!-- ---------------------------------ORDER------------------------------------ -->
           <li class="nav-item has-treeview menu-open" @click="itemActive($route.path)" id="select-vue">
             <router-link to="/shop/order" class="nav-link" :class="[(itemA == '/shop/order' || itemA == '/shop/cancel' || itemA == '/shop/confirm') ? 'active':'']">
-              <i class="nav-icon fas fa-list"></i>
+              
+              <i class="fas fa-shopping-cart"></i>
               <p>
-                Order
+                Đơn hàng
                 <i class="right fas fa-angle-left"></i>
               </p>
            </router-link>
             <ul class="nav nav-treeview">
               <li class="nav-item" @click="itemActive($route.path)">
                 <router-link to="/shop/order" class="nav-link" :class="[(itemA == '/shop/order') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List Order</p>
+                  <i class="nav-icon fas fa-list"></i>
+                  <p>Danh sách đơn hàng</p>
                 </router-link>
               </li>
                <li class="nav-item" @click="itemActive($route.path)">
                 <router-link to="/shop/cancel" class="nav-link" :class="[(itemA == '/shop/cancel') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Order list canceled</p>
+                  <i class="fas fa-file"></i>
+                  <p>Danh sách hủy đơn hàng</p>
                 </router-link>
               </li>
               <li class="nav-item" @click="itemActive($route.path)">
                 <router-link to="/shop/confirm" class="nav-link" :class="[(itemA == '/shop/confirm') ? 'active':'']">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Order list confirm</p>
+                  <i class="fas fa-file"></i>
+                  <p>Danh sách đơn hàng xác nhận</p>
                 </router-link>
               </li>
               
+            </ul>
+          </li>
+          <!-- -------------------------------ACCOUNT------------------- -->
+          <li class="nav-item has-treeview menu-open" @click="itemActive($route.path)" id="select-vue">
+            <router-link to="/shop/account" class="nav-link" :class="[(itemA == '/shop/account' || itemA == '/shop/updateaccount' || itemA == '/shop/updateavatar' || itemA == '/shop/updatecredit') ? 'active':'']">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+               Tài khoản
+                <i class="right fas fa-angle-left"></i>
+              </p>
+           </router-link>
+            <ul class="nav nav-treeview">
+              <li class="nav-item" @click="itemActive($route.path)">
+                <router-link to="/shop/account" class="nav-link" :class="[(itemA == '/shop/account') ? 'active':'']">
+                  <i class="far fa-id-badge"></i>
+                  <p>Hồ sơ</p>
+                </router-link>
+              </li>
+              <li class="nav-item" @click="itemActive($route.path)">
+                <router-link to="/shop/updateaccount" class="nav-link" :class="[(itemA == '/shop/updateaccount') ? 'active':'']">
+                  <i class="fas fa-address-book"></i>
+                  <p>Cập nhật hồ sơ</p>
+                </router-link>
+              </li>
+               <li class="nav-item" @click="itemActive($route.path)">
+                <router-link to="/shop/updatecredit" class="nav-link" :class="[(itemA == '/shop/updatecredit') ? 'active':'']">
+                  <i class="fab fa-cc-visa"></i>
+                  <p>Cập nhật thẻ</p>
+                </router-link>
+              </li>
+              <li class="nav-item" @click="itemActive($route.path)">
+                <router-link to="/shop/updateavatar" class="nav-link" :class="[(itemA == '/shop/updateavatar') ? 'active':'']">
+                 <i class="fas fa-camera-retro"></i>
+                  <p>Cập nhật hình ảnh</p>
+                </router-link>
+              </li>
             </ul>
           </li>
            <!-- ---------------------------------------Chart----------------------------- -->
@@ -125,8 +126,8 @@
            <router-link to="/shop/chart/group/bar" class="nav-link" :class="[(itemA == '/shop/chart/group/bar') ? 'active':'']">
               <i class="nav-icon fas fa-chart-bar"></i>
               <p>
-                Chart Bar
-                <span class="right badge badge-primary">group</span>
+                Biểu đồ
+                <span class="right badge badge-primary">Nhóm</span>
               </p>
              </router-link>
           </li>
@@ -134,8 +135,8 @@
            <router-link to="/shop/chart/total/line" class="nav-link" :class="[(itemA == '/shop/chart/total/line') ? 'active':'']">
               <i class="nav-icon fas fa-chart-line"></i>
               <p>
-                Chart Line
-                <span class="right badge badge-primary">Total</span>
+                Biểu đồ
+                <span class="right badge badge-primary">Tổng</span>
               </p>
              </router-link>
           </li>

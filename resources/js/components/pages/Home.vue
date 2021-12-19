@@ -5,7 +5,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Account</h1>
+                            <h1 class="m-0 text-dark">Tài khoản </h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
@@ -13,7 +13,7 @@
                                 <li class="breadcrumb-item">
                                     <router-link to="/home">Home</router-link>
                                 </li>
-                                <li class="breadcrumb-item active">Account</li>
+                                <li class="breadcrumb-item active">Tài khoản</li>
                             </ol>
                         </div>
                         <!-- /.col -->
@@ -32,7 +32,7 @@
                                         :to="{ path: '/create' }"
                                         style="width:80px"
                                         class="btn btn-success waves-effect waves-light m-r-10"
-                                        >Add
+                                        ><i class="nav-icon fas fa-plus"></i>
                                     </router-link>
                                     <br /> <br />
                                     <div class="container-fluid">
@@ -41,8 +41,7 @@
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h3 class="card-title">
-                                                            DataTable with
-                                                            default features
+                                                            Dữ liệu danh sách tài khoản
                                                         </h3>
                                                     </div>
                                                     <!-- /.card-header -->
@@ -55,18 +54,18 @@
                                                             <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
                                                         <thead>
                                                             <tr role="row"><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending">id</th>
-                                                            <th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" aria-sort="descending">Username</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Type(s)</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Delete</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Information</th></tr>
+                                                            <th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" aria-sort="descending">Tài khoản</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Loại(s)</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Xóa</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Thông tin</th></tr>
                                                         </thead>
                                                         <tbody>
                                                         <tr v-for="data in  resultQuery" role="row" class="odd" :key="data.id">
                                                         <td>{{data.id}}</td>
                                                         <td class="sorting_1">{{data.username}}</td>
                                                         <td>{{getText(data.type)}}</td>
-                                                        <td class=""><button class="btn btn-danger" @click.prevent="deletePost(data.id)">Delete</button></td>
-                                                        <td v-if="data.type != 2" class="sorting_1"><button class="btn btn-success" @click.prevent="detailPost(data.id, data.type)">See More</button></td>
+                                                        <td class=""><button class="btn btn-danger" @click.prevent="deletePost(data.id)"><i class="fas fa-trash-alt"></i></button></td>
+                                                        <td v-if="data.type != 2" class="sorting_1"><button class="btn btn-success" @click.prevent="detailPost(data.id, data.type)"><i class="fas fa-eye"></i></button></td>
                                                         <td v-else class="sorting_1"><button class="btn btn-default">You don't permission</button></td>
                                                         </tr>
                                                         </tbody>

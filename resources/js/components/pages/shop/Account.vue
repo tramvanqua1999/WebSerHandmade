@@ -5,7 +5,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Store Information</h1>
+                            <h1 class="m-0 text-dark">Thông tin cửa hàng</h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
@@ -29,9 +29,9 @@
           <!-- Breadcrumb -->
           <nav aria-label="breadcrumb" class="main-breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><router-link to="/shop/home">Home</router-link></li>
-              <li class="breadcrumb-item active"  aria-current="page"><span>User</span></li>
-              <li class="breadcrumb-item active" aria-current="page"><span>Profile</span></li>
+              <li class="breadcrumb-item"><router-link to="/shop/home">Trang chủ</router-link></li>
+              <li class="breadcrumb-item active"  aria-current="page"><span>Tài khoản</span></li>
+              <li class="breadcrumb-item active" aria-current="page"><span>Hồ sơ</span></li>
             </ol>
           </nav>
           <!-- /Breadcrumb -->
@@ -41,12 +41,12 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img v-bind:src="this.datas[0].img" alt="Admin" class="rounded-circle" width="150">
+                    <img v-bind:src="this.datas[0].img" alt="Shop" class="rounded-circle" width="150">
                     <div class="mt-3">  
                       <h4>{{this.datas[0].nameShop}}</h4>
-                      <span class="text-secondary mb-1"><b>Rating:</b> {{this.datas[0].ratingShop}} <i style="color: orange; font-size: 15px; line-height: 10px;" class="fas fa-star"></i></span>	&nbsp;	&nbsp;	&nbsp;
-                      <span class="text-muted font-size-sm"><b>Follow:</b> {{this.datas[0].follow}} </span>
-                      <button  @click="$router.push('/shop/updateaccount')" class="btn btn-success"  >Update Profile</button>
+                      <span class="text-secondary mb-1"><b>Đánh giá:</b> {{this.datas[0].ratingShop}} <i style="color: orange; font-size: 15px; line-height: 10px;" class="fas fa-star"></i></span>	&nbsp;	&nbsp;	&nbsp;
+                      <span class="text-muted font-size-sm"><b>Theo dõi:</b> {{this.datas[0].follow}} </span>
+                      <button  @click="$router.push('/shop/updateaccount')" class="btn btn-success"  >Cập nhật hồ sơ</button>
                       <!-- <button v-else class=".btn-success"  @click.prevent="Unblock()">UnBlock</button> -->
                     </div>
                   </div>
@@ -78,7 +78,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Full Name</h6>
+                      <h6 class="mb-0">Họ và tên</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                       {{this.datas[0].nameShop}}
@@ -96,7 +96,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Phone</h6>
+                      <h6 class="mb-0">SĐT</h6>
                     </div>
                     <div v-if="this.datas[0].phone != null" class="col-sm-9 text-secondary">
                         {{this.datas[0].phone}}
@@ -108,7 +108,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Mobile</h6>
+                      <h6 class="mb-0">Gmail</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                        {{this.datas[0].email}}
@@ -117,7 +117,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Address</h6>
+                      <h6 class="mb-0">Địa chỉ</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                        {{this.datas[0].address}}
@@ -126,7 +126,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Description</h6>
+                      <h6 class="mb-0">Mô tả</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                        {{this.datas[0].description}}
@@ -135,19 +135,19 @@
                 <hr>
                 <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Credit Card </h6>
+                      <h6 class="mb-0">Tên chủ thẻ VNPAY</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                        {{this.datas[0].cardHolderName}}
                     </div>
                     <div class="col-sm-3">
-                      <h6 class="mb-0"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Number Card </h6>
+                      <h6 class="mb-0"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Số PIN </h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                        {{this.datas[0].cardNumber}}
                     </div>
                      <div class="col-sm-3">
-                      <h6 class="mb-0"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Expiry Date </h6>
+                      <h6 class="mb-0"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ngày hết hạn </h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                        {{this.datas[0].expiryDate}}

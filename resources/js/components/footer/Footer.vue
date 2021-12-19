@@ -1,10 +1,9 @@
 <template>
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.0
+      <b>Văn Quá</b> B1704632
     </div>
-    <strong>Copyright &copy; 2021-2022 <a href="https://adminlte.io">MTV</a>.</strong> All rights
-    reserved.
+    <strong>Thư mục chứa các ảnh của sản phẩm <a href="https://drive.google.com/drive/u/0/folders/1ncKoZC9ElMbU-Bwuag5ROBFZL6LJjecj/">Nông Sản Việt</a>.</strong> 
   </footer>
 </template>
 

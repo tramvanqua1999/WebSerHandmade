@@ -4,12 +4,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Update Avatar</h1>
+            <h1>Cập nhật hình ảnh đại diện của cửa hàng</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><router-link to="/shop/account">Home</router-link></li>
-              <li class="breadcrumb-item active">Update Avatar</li>
+              <li class="breadcrumb-item active">Cập nhật</li>
             </ol>
           </div>
         </div>
@@ -25,14 +25,14 @@
             <!-- jquery validation -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">From Create</h3>
+                <h3 class="card-title">Bảng cập nhật ảnh đại diện</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form role="form" id="quickForm" @submit.prevent="addImages">
                 <div class="card-body">
                     <div class="form-group">
-                    <label for="exampleInputEmail1">Choose images</label>
+                    <label for="exampleInputEmail1">Chọn hình ảnh</label>
                     <div id="app" >
                             <input   type="file" class="form-control" multiple accept="image/jpeg/jpg" @change="uploadImage"/>
                             <div style="display: inline; margin-top: 30px; margin-right: 20px" v-for="(data, key) in datas.url" :key="key">
@@ -43,7 +43,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Cập nhật hình ảnh</button>
                 </div>
               </form>
             </div>

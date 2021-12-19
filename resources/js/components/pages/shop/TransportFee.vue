@@ -4,12 +4,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Add Transport Fee</h1>
+            <h1>Thêm phí vận chuyển</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><router-link to="/shop/home">Home</router-link></li>
-              <li class="breadcrumb-item active">Add Transport Fee</li>
+              <li class="breadcrumb-item active">Thêm phí vận chuyển</li>
             </ol>
           </div>
         </div>
@@ -25,25 +25,25 @@
             <!-- jquery validation -->
             <div class="card card-primary" style="width: 70%; margin: 0 auto">
               <div class="card-header">
-                <h3 class="card-title">From Add Transport Fee</h3>
+                <h3 class="card-title">Bảng thêm phí vận chuyển</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form role="form" id="quickForm" @submit.prevent="addFee">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Minimum amount to be free delivery</label>
+                    <label for="exampleInputEmail1">Số tiền tối thiểu để được giao hàng miễn phí</label>
                     <input type="text" class="form-control" @input="datas[0].fee = $event.target.value" id="exampleInputEmail1" :value="datas[0].fee">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Otherwise: Transport Fee</label>
+                    <label for="exampleInputEmail1">Nếu không: Phí vận chuyển</label>
                     <input type="text" class="form-control" @input="datas[0].price = $event.target.value" id="exampleInputEmail1" :value="datas[0].price">
                   </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">
-                      Submit   
+                     Thêm phí vận chuyển
                   </button>
                 </div>
               </form>
@@ -74,9 +74,9 @@
             });
         },
         addFee(){
-            // console.log(localStorage.getItem('id'));
-            // console.log(this.datas[0].fee);
-            // console.log(this.datas[0].price);
+            console.log(localStorage.getItem('id'));
+            console.log(this.datas[0].fee);
+            console.log(this.datas[0].price);
               let uri = `http://127.0.0.1:8000/api/shop/post/addfee/${localStorage.getItem('id')}`;
               this.axios.post(uri, this.datas[0]).then((response) => {
                   if(response.data == "successfully update"){

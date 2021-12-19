@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Update Profile</h1>
+            <h1>Cập nhật hồ sơ cửa hàng</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -25,26 +25,26 @@
             <!-- jquery validation -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">From Update Profile Shop</h3>
+                <h3 class="card-title">Bảng cập nhật hồ sơ cửa hàng</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form role="form" id="quickForm" @submit.prevent="update">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Name</label>
+                    <label for="exampleInputEmail1">Tên cửa hàng</label>
                     <input type="text" class="form-control" @input="datas[0].nameShop = $event.target.value" id="exampleInputEmail1" :value="datas[0].nameShop">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Description</label>
+                    <label for="exampleInputPassword1">Mô tả</label>
                      <textarea class="form-control" @input="datas[0].description = $event.target.value" id="exampleFormControlTextarea1" :value="datas[0].description" rows="3"></textarea>
                   </div>
                    <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Address</label>
+                    <label for="exampleFormControlTextarea1">Địa chỉ</label>
                    <input type="text"  class="form-control"  @input="datas[0].address = $event.target.value" id="exampleInputPassword1" :value="datas[0].address">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Phone</label>
+                    <label for="exampleInputPassword1">SĐT</label>
                     <input type="text"  class="form-control" @input="datas[0].phone = $event.target.value" id="exampleInputPassword1" :value="datas[0].phone">
                   </div>
                    <div class="form-group">
@@ -54,7 +54,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Cập nhật</button>
                 </div>
               </form>
             </div>

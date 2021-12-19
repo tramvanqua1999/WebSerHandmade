@@ -4,12 +4,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Add Group Product</h1>
+            <h1>Thêm nhóm sản phẩm</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><router-link to="/home">Home</router-link></li>
-              <li class="breadcrumb-item active">Add group product</li>
+              <li class="breadcrumb-item active">Thêm nhóm sản phẩm</li>
             </ol>
           </div>
         </div>
@@ -25,21 +25,21 @@
             <!-- jquery validation -->
             <div class="card card-primary" style="width: 70%; margin: 0 auto">
               <div class="card-header">
-                <h3 class="card-title">From Create Group Product</h3>
+                <h3 class="card-title">Bảng thêm nhóm sản phẩm</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form role="form" id="quickForm" @submit.prevent="addGroup">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Name Group Product</label>
+                    <label for="exampleInputEmail1">Tên nhóm sản phẩm</label>
                     <input type="text" class="form-control" v-model="datas.namegroup" id="exampleInputEmail1" placeholder="Enter Username">
                   </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">
-                      Add   
+                      Thêm 
                   </button>
                 </div>
               </form>

@@ -5,7 +5,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Confirmation Account</h1>
+                            <h1 class="m-0 text-dark">Thông tin tài khoản</h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
@@ -13,7 +13,7 @@
                                 <li class="breadcrumb-item">
                                     <router-link to="/home">Home</router-link>
                                 </li>
-                                <li class="breadcrumb-item active">Confirmation Account shop - customer</li>
+                                <li class="breadcrumb-item active">Thông tin tài khoản khách hàng và cửa hàng</li>
                             </ol>
                         </div>
                         <!-- /.col -->
@@ -44,7 +44,7 @@
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h3 class="card-title">
-                                                            The row account table or customer
+                                                            Danh sách tài khoản khách hàng và cửa hàng
                                                         </h3>
                                                     </div>
                                                     <!-- /.card-header -->
@@ -114,16 +114,16 @@ export default {
                     width: "80px"
                 },
                 {
-                    label: "Username",
+                    label: "Tài khoản",
                     field: "username"
                 },
                 {
-                    label: "Type",
+                    label: "Loại(s)",
                     field: "type",
                     type: "number"
                 },
                 {
-                    label: "Function",
+                    label: "Chức năng",
                     field: "function",
                     filterable: true
                 }

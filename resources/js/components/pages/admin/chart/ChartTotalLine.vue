@@ -5,12 +5,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Account</h1>
+            <h1 class="m-0 text-dark">Biểu đồ doanh thu qua từng tháng</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><router-link to="/home">Home</router-link></li>
-              <li class="breadcrumb-item active">Account</li>
+              <li class="breadcrumb-item active">Biểu đồ</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -18,7 +18,7 @@
     </section><!-- /.container-fluid -->
         <div id="page-wrapper">
           <div class="form-group row float-left" style="margin-left : 40px" >
-            <label  class=" col-form-label " style="width: 100px">Select Year</label>
+            <label  class=" col-form-label " style="width: 100px">Chọn năm</label>
             
             <div>
               <vuejs-datepicker 
@@ -134,7 +134,7 @@
                  {
                   labels:labels,
                   datasets: [{
-                    label: "Totals Post",
+                    label: "Tổng đánh giá",
                  
                     borderColor: "#05CBE1",
                     pointBackgroundColor: "white",

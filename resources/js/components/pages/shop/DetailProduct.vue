@@ -5,7 +5,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Details</h1>
+                            <h1 class="m-0 text-dark">Chi tiết sản phẩm</h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
@@ -13,7 +13,7 @@
                                 <li class="breadcrumb-item">
                                     <router-link to="/home/listproduct">Home</router-link>
                                 </li>
-                                <li class="breadcrumb-item active">Details</li>
+                                <li class="breadcrumb-item active">Chi tiết</li>
                             </ol>
                         </div>
                         <!-- /.col -->
@@ -43,14 +43,14 @@
                                     <h3 class="product-title">{{datas[0].name}}</h3>
                                     <div class="rating">
                                         <div class="stars">
-                                            <span class="">Rating: {{datas[0].rating}}</span>
+                                            <span class="">Số sao: {{datas[0].rating}}</span>
                                             <span class="fa fa-star checked"></span>
                                         </div>
                                     </div>
-                                    <p class="product-description">Description: {{datas[0].description}}</p>
-                                    <p >Price: <span>{{datas[0].price}} Vnd</span></p>
-                                    <p> Amount: {{datas[0].amount}}</p>
-                                    <p> Create: {{datas[0].create}}</p>
+                                    <p class="product-description">Mô tả: {{datas[0].description}}</p>
+                                    <p >Giá: <span>{{datas[0].price}} Vnd</span></p>
+                                    <p> Số lượng: {{datas[0].amount}}</p>
+                                    <p> Ngày tạo: {{datas[0].create}}</p>
                                 </div>
                             </div>
                         </div>

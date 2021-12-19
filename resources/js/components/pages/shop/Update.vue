@@ -4,12 +4,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Add Product</h1>
+            <h1>Cập nhật sản phẩm</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><router-link to="/shop/home">Home</router-link></li>
-              <li class="breadcrumb-item active">Add Product</li>
+              <li class="breadcrumb-item active">Cập nhật sản phẩm</li>
             </ol>
           </div>
         </div>
@@ -25,40 +25,40 @@
             <!-- jquery validation -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">From Create</h3>
+                <h3 class="card-title">Bảng cập nhật sản phẩm</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form role="form" id="quickForm" @submit.prevent="updateproduct" >
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Name product</label>
+                    <label for="exampleInputEmail1">Tên sản phẩm</label>
                     <input type="text" class="form-control" @input="datas[0].name = $event.target.value"  id="exampleInputEmail1" :value="datas[0].name">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Price Product</label>
+                    <label for="exampleInputPassword1">Giá</label>
                     <input type="text"  class="form-control"   @input="datas[0].price = $event.target.value" id="exampleInputPassword1" :value="datas[0].price">
                   </div>
                    <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Description</label>
+                    <label for="exampleFormControlTextarea1">Mô tả</label>
                     <textarea class="form-control" @input="datas[0].description = $event.target.value" id="exampleFormControlTextarea1" :value="datas[0].description" rows="3"></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Amount Product</label>
+                    <label for="exampleInputPassword1">Số lượng</label>
                     <input type="text"  class="form-control"  @input="datas[0].amount = $event.target.value" id="exampleInputPassword1" :value="datas[0].amount">
                   </div>
                    <div class="form-group">
-                    <label for="exampleInputPassword1">Discount Product</label>
+                    <label for="exampleInputPassword1">Giảm giá</label>
                     <input type="text"  class="form-control" @input="datas[0].discount = $event.target.value"  id="exampleInputPassword1" :value="datas[0].discount">
                   </div>
                   <div class="form-group colum">
-                    <label for="example-date-input" class="col-2 col-form-label">Date</label>
+                    <label for="example-date-input" class="col-2 col-form-label">Ngày</label>
                     <div class="col-10">
                       <input class="form-control" @input="datas[0].lastday = $event.target.value" style="margin-left:-10px ; width: 30%" type="date" :value="datas[0].lastday" id="example-date-input">
                     </div>
                   </div>
                     <div class="form-group">
-                    <label>Minimal</label>
+                    <label>Nhóm</label>
                     <select class="form-control select2" style="width: 100%;" v-model="datas[0].groupProduct" >
                         <option  v-for="item in this.group" :key="item.id" :value="item.id">{{item.name}}</option>                    
                     </select>
@@ -68,7 +68,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Cập nhật sản phẩm</button>
                 </div>
               </form>
             </div>

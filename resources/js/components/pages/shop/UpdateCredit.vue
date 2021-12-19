@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Update Profile</h1>
+            <h1>Cập nhật thẻ VNPAY</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -25,22 +25,22 @@
             <!-- jquery validation -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">From Update Credit Shop</h3>
+                <h3 class="card-title">Bảng cập nhật thẻ VNPAY</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form role="form" id="quickForm" @submit.prevent="update">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Name Credit Card</label>
+                    <label for="exampleInputEmail1">Tên chủ thẻ</label>
                     <input type="text" class="form-control" @input="datas[0].cardHolderName = $event.target.value" id="exampleInputEmail1" :value="datas[0].cardHolderName">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Card Number</label>
+                    <label for="exampleInputPassword1">Số PIN</label>
                      <textarea class="form-control" @input="datas[0].cardNumber = $event.target.value" id="exampleFormControlTextarea1" :value="datas[0].cardNumber" rows="3"></textarea>
                   </div>
                    <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Expiry Date</label>
+                    <label for="exampleFormControlTextarea1">Ngày hết hạn</label>
                    <input type="text"  class="form-control"  @input="datas[0].expiryDate = $event.target.value" id="exampleInputPassword1" :value="datas[0].expiryDate">
                   </div>
                   <div class="form-group">
@@ -50,7 +50,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Cập nhật thẻ</button>
                 </div>
               </form>
             </div>

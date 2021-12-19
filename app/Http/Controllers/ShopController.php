@@ -107,7 +107,7 @@ class ShopController extends Controller
     {
         $fee = $request->fee;
         $price = $request->price;
-        $data = DB::select('UPDATE `shop` SET `fee`=?,`price`=? WHERE `shop`.`id` = (SELECT `shop`.`id` FROM `shop`,`user` WHERE `user`.`id` = ?)',[$fee,$price,$id]);
+        $data = DB::select('UPDATE `shop` SET `fee`=?,`price`=? WHERE `shop`.`id` = (SELECT `shop`.`id` FROM `shop`,`user` WHERE `user`.`id` = ? and `user`.`username` = `shop`.`shopID`)',[$fee,$price,$id]);
         return response()->json('successfully update');
     }
     public function getinfoShop($id)
